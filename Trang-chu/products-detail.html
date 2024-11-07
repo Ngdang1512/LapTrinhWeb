@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Trangchu.css">
+    <link rel="stylesheet" href="css/product-detail.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <title>Badminton Racket Store</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-title">
+                <img src="image/logo.jpg" alt="Badminton Logo" class="logo">
+                <h1>Cửa hàng cầu lông</h1>
+            </div>
+            <nav id="menu">
+                <ul>
+                    <li class="main-menu-item"><a href="Trangchu.html">Trang chủ</a></li>
+                    <li class="main-menu-item">
+                        <a href="#products">Sản phẩm</a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="#">Vợt cầu lông</a>
+                                <ul class="sub-menu-child">
+                                    <li><a href="products-yonex.html">Yonex</a></li>
+                                    <li><a href="products-lining.html">Lining</a></li>
+                                    <li><a href="products-victor.html">Victor</a></li>
+                                    <li><a href="products-mizuno.html">Mizuno</a></li>
+                                </ul>
+                            </li>    
+
+                            <li>
+                                <a href="#">Giày cầu lông</i></a>
+                                <ul class="sub-menu-child">
+                                    <li><a href="shoes-yonex.html">Yonex</a></li>
+                                    <li><a href="shoes-lining.html">Lining</a></li>
+                                    <li><a href="shoes-victor.html">Victor</a></li>
+                                    <li><a href="shoes-mizuno.html">Mizuno</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">Quả cầu lông</a>
+                                <ul class="sub-menu-child">
+                                    <li><a href="products-yonex-ball.html">Yonex</a></li>
+                                    <li><a href="products-victor-ball.html">Victor</a></li>
+                                    <li><a href="products-lining-ball.html">Lining</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">Phụ kiện cầu lông</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="main-menu-item"><a href="about.html">Thông tin</a></li>
+                    <li class="main-menu-item"><a href="contact.html">Liên hệ</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-right">
+                <div id="cart-container">
+                    <div id="cart-icon">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="cart-count">0</span>
+                    </div>
+                </div>
+
+                <div class="auth-buttons">
+                    <a href="login.html" id="login button" class="auth-btn login-btn">Đăng nhập</a>
+                    <a href="register.html" id="register button" class="auth-btn register-btn">Đăng ký</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="product-detail-container">
+        <div class="product-detail">
+            <div class="product-images">
+                <div class="main-image">
+                    <img src="image/88d.jpg" alt="Vợt cầu lông Yonex Astrox 88D Pro">
+                </div>
+                <div class="thumbnail-images">
+                    <img src="image/88d.jpg" alt="Chi tiết 1">
+                    <img src="image/88d_1.webp" alt="Chi tiết 2">
+                    <img src="image/88d_2.webp" alt="Chi tiết 3">
+                </div>
+            </div>
+
+            <div class="product-info">
+                <h1>Vợt cầu lông Yonex Astrox 88D Pro</h1>
+                <div class="price">4,000,000 VND</div>
+                
+                <div class="product-description">
+                    <h2>Mô tả sản phẩm</h2>
+                    <p>Yonex Astrox 88D Pro là lựa chọn tuyệt vời cho người chơi tấn công mạnh mẽ.</p>
+                </div>
+
+                <div class="product-specifications">
+                    <h2>Thông số kỹ thuật</h2>
+                    <ul>
+                        <li><strong>Trọng lượng:</strong> 4U (Khoảng 83g)</li>
+                        <li><strong>Độ cứng:</strong> Cứng</li>
+                        <li><strong>Điểm cân bằng:</strong> Nặng đầu</li>
+                        <li><strong>Khung vợt:</strong> Carbon Graphite</li>
+                        <li><strong>Công nghệ:</strong> ASTROX, Rotational Generator System</li>
+                    </ul>
+                </div>
+
+                <div class="purchase-options">
+                    <div class="quantity">
+                        <label for="quantity">Số lượng:</label>
+                        <div class="quantity-selector">
+                            <button class="quantity-btn minus">-</button>
+                            <input type="number" id="quantity" class="quantity-input" value="1" min="1" max="99" readonly>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                    </div>
+                    <div class="select-swatch div_chon_size nhom_sp_html" data_field="size_list">
+                        <div class="swatch clearfix" data-option-index="0">
+                            <div class="header">
+                                <b>Chọn [Size]:</b>
+                            </div>
+                            <div class="swatch-element">
+                                <div class="size-options">
+                                    <input type="radio" name="size" id="size-3U5" value="3U5" class="size-input">
+                                    <label for="size-3U5" class="size-label">3U5</label>
+                        
+                                    <input type="radio" name="size" id="size-3U6" value="3U6" class="size-input">
+                                    <label for="size-3U6" class="size-label">3U6</label>
+                        
+                                    <input type="radio" name="size" id="size-4U5" value="4U5" class="size-input">
+                                    <label for="size-4U5" class="size-label">4U5</label>
+                        
+                                    <input type="radio" name="size" id="size-4U6" value="4U6" class="size-input">
+                                    <label for="size-4U6" class="size-label">4U6</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                        <button class="buy-now">Mua ngay</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-tabs">
+            <div class="tab-content">
+                <div class="product-description-detail">
+                    <h2>THÔNG TIN CHI TIẾT</h2>
+
+                    <div class="description-section">
+                        <h3>GIỚI THIỆU VỢT CẦU LÔNG ASTROX YONEX 88D PRO</h3>
+                        <p style="font-size: 18px;">
+                            Siêu phẩm Smash cầu Liên Thanh ngon nhất Năm 2021 
+                            nổi trội với thông số 3U, 4U và sẽ có trọng lượng 
+                            sẽ nhẹ hơn đôi chút so với bản cũ, đầu vợt vẫn giữ 
+                            nguyên điểm cân bằng vào khoảng 301mm cùng công nghệ 
+                            mới Volume Cut Resin với 8 lỗ gen ở giữa 2 bên to hơn 
+                            và vẫn giữ nguyên 76 lỗ gen giúp tối đa hóa về khả năng 
+                            Smash cầu Liên Tục được thiết kế dành riêng cho cầu trên trong Đánh Đôi.</p>
+
+                        <p style="font-size: 18px;">
+                            Vợt cầu lông Yonex Astrox 88D Pro được ra mắt nhằm đáp ứng
+                            cho lối đánh hiện đại này với việc nâng cấp ROTATIONAL GENARATOR 
+                            SYSTEM bằng công nghệ mới VOLUME CUT RESIN - Sử dụng vật liệu 
+                            nhựa đột phá có độ bền tuyệt vời cho toàn bộ khung. Công nghệ 
+                            mới nàycho sự phân bổ trọng lượng đồng đều trên tổng thể vợt một 
+                            cách chính xác nhất giúp các lông thủ cực nổi trội trong những pha 
+                            cầu tấn công liên tục, hỗ trợ tốt nhất cho vợt sau khi đánh xong quả 
+                            cầu trước và chuẩn bị cho các pha đánh cầu tiếp theo dễ dàng hơn. Điều 
+                            này giúp cho việc dù đang cầm vợt nặng đầu nhưng vẫn mang đến cảm giác cân bằng, thoải mái nhất.
+                        </p>
+
+                        <p style="font-size: 18px;">
+                            Ngoài ra, cải tiến từ VOLUME CUT RESIN cũng có thể được nhìn
+                            thấy trong khung và lỗ gen vợt. Cấu trúc khung được phát triển 
+                            với điểm ngọt lớn hơn được tạo ra nhờ hình dạng đầu Isometric mới 
+                            giúp tăng cường sức mạnh trên vợt. Đặc biệt, một số các lỗ gen vợt 
+                            giữa khung được cải tiến với đường kính lớn hơn, được đặt một cách 
+                            chiến lược cho phép chuyển động dây nhiều hơn khi va chạm và cuối 
+                            cùng là tăng khả năng giữ cầu để thực hiện các cú đánh quyết đoán. 
+                            Với Yonex Astrox 88D Pro được thiết kế cho người chơi cầu sau, sẽ 
+                            cân bằng lực đẩy và lực giữ cầu để có sức mạnh tối đa trong các quả Smash bùng nổ.
+                        </p>
+
+                        <p style="font-size: 18px;">
+                            Đặc biệt nhất và chỉ được áp dụng trên phiên bản PRO với mặt khung 
+                            cây vợt cầu lông xịn Yonex Astrox 88D Pro gần với hình vuông hơn 
+                            so với các sản phẩm thông thường khác, có thể nói như bản nâng cấp 
+                            của công nghệ "ISOMETRIC" nhằm cải tạo và mở rộng diện tích điểm 
+                            ngọt giúp người chơi có thể tung ra các pha cầu mạnh mẽ ngay cả khi 
+                            lệnh tâm. Ngoài ra, bằng cách làm dày bên khung giúp độ cứng cáp 
+                            của vợt được tăng lên đáng kể - Khắc phục hoàn hảo về khung vợt Yonex thường khá mỏng manh, dễ gãy.
+                        </p>
+
+                        <p style="font-size: 18px;">
+                            Tóm lại nếu bạn thích lối đánh chuyên Smash trong Đánh Đôi nổi trội 
+                            với những pha Đập cầu Siêu Nặng thì chắc chắn siêu phẩm Vợt cầu lông 
+                            Yonex Astrox 88D Pro này là lựa chọn hoản hảo nhất đấy nhé. Ngoài ra, 
+                            các bạn có thể tham khảo thêm các mẫu vợt cầu lông Yonex khác với nhiều mẫu mã đa dạng
+                        </p>
+                        
+                        <div style="text-align: center;">
+                           <img src="image/88d_1.webp" alt=""> 
+                        </div>
+                    </div>
+
+                    <div class="description-section">
+                        <h3>THÔNG SỐ KỸ THUẬT</h3>
+                        <ul class="specs-list">
+                            <li><span class="spec-label">Điểm cân bằng:</span> Khoảng 301mm (Nặng đầu)</li>
+                            <li><span class="spec-label">Độ Cứng:</span> Siêu Cứng</li>
+                            <li><span class="spec-label">Màu sắc:</span> Camel Gold - Vàng Lạc Đà</li>
+                            <li><span class="spec-label">Vật liệu khung:</span> HM Graphite + VOLUME CUT RESIN + Tungsten</li>
+                            <li><span class="spec-label">Vật liệu trục:</span> HM Graphite + Namd</li>
+                            <li class="multi-line">
+                                <span class="spec-label">Trọng lượng/ Chu vi cán vợt:</span>
+                                <div class="multi-value">
+                                    <span>4U (Ave.83g)/G5</span>
+                                    <span>3U (Ave.88g)/G5</span>
+                                </div>
+                            </li>
+                            <li><span class="spec-label">Chiều dài tổng thể:</span> 675 mm</li>
+                            <li><span class="spec-label">Điểm swing weight:</span> 3U 85,8 kg/cm2</li>
+                            <li><span class="spec-label">Chiều dài cán vợt:</span> 200mm</li>
+                            <li class="multi-line">
+                                <span class="spec-label">Mức căng dây</span>
+                                <div class="multi-value">
+                                    <span>4U: 20 - 28 lbs</span>
+                                    <span>3U: 21 - 29 lbs</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="description-section">
+                        <h3>CÔNG NGHỆ NỔI BẬT</h3>
+                        <ul>
+                            <li style="font-size: 18px;"><strong style="text-decoration: underline;">Rotational Generator System:</strong>
+                                Là công nghệ theo thuyết đối trọng. Trọng lực được phân bổ ở đầu, đoạn nối chữ T 
+                                và phần đầu cây vợt cầu lông xịn Yonex Astrox 88D Pro. Việc phân bổ như vậy giúp 
+                                cho cây vợt được đồng đều, hỗ trợ tốt nhất cho vợt sau khi đánh xong quả cầu trước 
+                                và chuẩn bị cho pha đánh cầu tiếp theo dễ dàng hơn. Điều này giúp cho việc dù đang 
+                                cầm vợt nặng đầu nhưng vẫn mang đến cảm giác cân bằng, thoải mái.
+                            </li>
+                            <div style="text-align: center;">
+                                <img src="image/rotational.webp" alt="Rotational Generator System">
+                            </div>
+
+                            <li style="font-size: 18px;"><strong style="text-decoration: underline;">Volume Cut Resin:</strong>
+                                Cấu trúc khung được phát triển với điểm ngọt lớn hơn được tạo ra nhờ hình dạng đầu 
+                                Isometric mới giúp tăng cường sức mạnh trên vợt. Đặc biệt, một số các lỗ gen vợt giữa 
+                                khung được cải tiến với đường kính lớn hơn, được đặt một cách chiến lược cho phép chuyển 
+                                động dây nhiều hơn khi va chạm và cuối cùng là tăng khả năng giữ cầu để thực hiện các cú 
+                                đánh quyết đoán. Với cây vợt Yonex Astrox 88D Pro được thiết kế cho người chơi cầu sau, sẽ 
+                                cân bằng lực đẩy và lực giữ cầu để có sức mạnh tối đa trong các quả Smash bùng nổ.
+                            </li>
+                            <div style="text-align: center;">
+                                <img src="image/volume.webp" alt="Rotational Generator System">
+                            </div>
+
+                            <li style="font-size: 18px;"><strong style="text-decoration: underline;">NAMD:</strong>
+                                Là công nghệ phủ vật liệu nano lên trực tiếp vào sợi than chì cải thiện sự kết dính 
+                                giữa than chì và nhựa giúp tăng độ đàn hồi cho đũa vợt cầu lông Yonex Astrox 88D Pro 
+                                chính hãng và giúp đũa vợt quay lại trạng thái ổn định nhất.
+                            </li>
+                            <div style="text-align: center;">
+                                <img src="image/namd.webp" alt="Rotational Generator System">
+                            </div>
+
+                            <li style="font-size: 18px;"><strong style="text-decoration: underline;">SOLID FEEL CORE:</strong>
+                                Công nghệ được áp dụng bên trong lõi của khung cây vợt cầu lông xịn Yonex Astrox 88D 
+                                Pro New 2021, bên trong lõi có lớp xốp. Lớp xốp này có vai trò cắt giảm  những rung động 
+                                có hại, mục địch chính là giúp hấp thụ chấn, chống sốc lên tay khi tay phải chịu áp lực 
+                                từ thân vợt cứng. SOLIC FEEL CORE được áp dụng trong tất cả các cây vợt được sản xuất tại Nhật Bản.
+                            </li>
+                            <div style="text-align: center;">
+                                <img src="image/soild.webp" alt="Rotational Generator System">
+                            </div>
+
+                            <li style="font-size: 18px;"><strong style="text-decoration: underline;">AERO-BOX FRAME:</strong>
+                                Mục đích của việc thiết kế mặt khung hình oval là để khi đánh vợt sẽ lướt gió cho không khí qua, 
+                                BOX FRAME vát 2 bên giúp vợt cứng cáp hơn. Thiết kế giúp tăng khí động lực học, giúp chúng ta vung 
+                                vợt nhanh hơn, đập cầu mạnh hơn.
+                            </li>
+                            <div style="text-align: center;">
+                                <img src="image/aero.webp" alt="Rotational Generator System">
+                            </div>
+
+                            <li style="font-size: 18px;"><strong style="text-decoration: underline;" >Extra Slim Shaft:</strong>
+                                Trục vợt siêu mỏng với công nghệ Carbon Nanometric tiên tiến được sử dụng để sản xuất một trục 
+                                khí động học siêu mỏng, siêu bền, tạo ra một cú đánh mạnh hơn và cường độ cao hơn.
+                            </li>
+                            <div style="text-align: center;">
+                                <img src="image/slim_shaft.webp" alt="Rotational Generator System">
+                            </div>
+
+                            <li style="font-size: 18px;"><strong style="text-decoration: underline;">VOLUME CUT RESIN:</strong>
+                                Cấu trúc khung được phát triển với điểm ngọt lớn hơn được tạo ra nhờ hình dạng đầu Isometric 
+                                mới giúp tăng cường sức mạnh trên vợt. Đặc biệt, một số các lỗ gen vợt giữa khung được cải 
+                                tiến với đường kính lớn hơn, được đặt một cách chiến lược cho phép chuyển động dây nhiều hơn 
+                                khi va chạm và cuối cùng là tăng khả năng giữ cầu để thực hiện các cú đánh quyết đoán. Với 
+                                cây vợt Yonex Astrox 88D Pro được thiết kế cho người chơi cầu sau, sẽ cân bằng lực đẩy và lực 
+                                giữ cầu để có sức mạnh tối đa trong các quả Smash bùng nổ.
+                            </li>
+                            <div style="text-align: center;">
+                                <img src="image/volume.webp" alt="Rotational Generator System">
+                            </div>
+
+                            <li style="font-size: 18px;"><strong style="text-decoration: underline;">Energy Boost CAP PLUS:</strong>
+                                Chụp mũ vợt được cải tiếng giống như 100ZZ có hình dạng độc đáo giúp tối đa hóa hiệu suất của trục. 
+                                Mặt trước cho phép trục uốn cong, trong khi đường cong hình vòm hai bên giúp ổn định mặt vợt bằng 
+                                cách ngăn trục xoắn. Ngoài ra, với thiết kế này cũng sẽ giúp Yonex Astrox 88D Pro có điểm tựa lớn 
+                                hơn trong các pha cầu tì đè, bắt lưới cần cầm cao cán vợt.
+                            </li>
+                            <div style="text-align: center;">
+                                <img src="image/ebcap.webp" alt="Rotational Generator System">
+                            </div>
+                        </ul>
+                    </div>
+
+                    <div class="description-section">
+                        <h3>ĐỐI TƯỢNG PHỤC VỤ</h3>
+                        <ul>
+                            <li style="font-size: 18px;">
+                                - Siêu phẩm vợt cầu lông Yonex Astrox 88D Pro sẽ phù hợp dành cho người chơi phong trào tầm cao, 
+                                với phiên bản 4U dành cho người chơi trình độ khoảng trung bình - khá, bản 3U khá nặng dành riêng 
+                                cho các bạn đánh khá - tốt, vận động viên phong trào, bán chuyên, chuyên nghiệp. <br>
+                                - Phù hợp hơn khi dùng trong đánh Đôi và đặc biệt là chơi ở vị trí Cầu Sau chuyên về khả năng Smash cầu liên tục, mạnh mẽ. <br>
+                                - Yêu cầu người chơi ở mức Trung Bình trở lên sẽ dễ dàng thuần thục được vợt hơn vì thân Vợt khá cứng đấy nhé !
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="description-section">
+                        <h3>Chính sách bảo hành</h3>
+                        <ul style="font-size: 18px;">
+                            <li>
+                                - Bảo hành chính hãng 12 tháng. <br>
+                                - 1 đổi 1 trong 7 ngày đầu nếu có lỗi từ nhà sản xuất. <br>
+                                - Tặng kèm quấn cán vợt.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="description-section">
+                        <h3>CAM KẾT KHI MUA HÀNG</h3>
+                        <ul style="font-size: 18px;">
+                            <li>
+                                - Sản phẩm chính hãng 100% <br>
+                                - Giá cả tốt nhất thị trường <br>
+                                - Giao hàng toàn quốc <br>
+                                - Tư vấn nhiệt tình, chuyên nghiệp <br>
+                                - Hỗ trợ đổi size trong vòng 7 ngày
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; Cửa hàng vợt cầu lông</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/dc2acc0315.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="js/product-detail.js"></script>
+
+</body>
+</html>

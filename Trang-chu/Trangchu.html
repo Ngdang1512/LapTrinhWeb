@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cửa hàng bán vợt và phụ kiện cầu lông">
+    <title>Badminton Racket Store</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/Trangchu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-container">
+                <div class="logo-title">
+                    <img src="image/logo.jpg" alt="Badminton Logo" class="logo">
+                    <h1>Cửa hàng cầu lông</h1>
+                </div>
+                <nav id="menu">
+                    <ul>
+                        <li class="main-menu-item"><a href="Trangchu.html">Trang chủ</a></li>
+                        <li class="main-menu-item">
+                            <a href="#products">Sản phẩm</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="#">Vợt cầu lông</a>
+                                    <ul class="sub-menu-child">
+                                        <li><a href="products-yonex-page-1.html">Yonex</a></li>
+                                        <li><a href="products-lining.html">Lining</a></li>
+                                        <li><a href="products-victor.html">Victor</a></li>
+                                        <li><a href="products-mizuno.html">Mizuno</a></li>
+                                    </ul>
+                                </li>    
+
+                                <li>
+                                    <a href="#">Giày cầu lông</i></a>
+                                    <ul class="sub-menu-child">
+                                        <li><a href="shoes-yonex.html">Yonex</a></li>
+                                        <li><a href="shoes-lining.html">Lining</a></li>
+                                        <li><a href="shoes-victor.html">Victor</a></li>
+                                        <li><a href="shoes-mizuno.html">Mizuno</a></li>
+                                    </ul>
+                                </li>
+
+                                <li><a href="#">Quả cầu lông</a>
+                                    <ul class="sub-menu-child">
+                                        <li><a href="products-yonex-ball.html">Yonex</a></li>
+                                        <li><a href="products-victor-ball.html">Victor</a></li>
+                                        <li><a href="products-lining-ball.html">Lining</a></li>
+                                    </ul>
+                                </li>
+
+                                <li><a href="#">Phụ kiện cầu lông</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="main-menu-item"><a href="about.html">Thông tin</a></li>
+                        <li class="main-menu-item"><a href="contact.html">Liên hệ</a></li>
+                    </ul>
+                </nav>
+
+                
+
+                <div class="header-right">
+                    <div id="cart-container">
+                        <div id="cart-icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span id="cart-count">0</span>
+                        </div>
+                    </div>
+
+                    <div class="auth-buttons">
+                        <div id="user-info" style="display: none;">
+                            <span class="welcome">Xin chào, <span id="user-name"></span></span>
+                            <div class="user-menu">
+                                <a href="#">Thông tin tài khoản</a>
+                                <a href="#">Đơn hàng của tôi</a>
+                                <a href="#">Đăng xuất</a>
+                            </div>
+                        </div>
+
+                        <a href="login.html" id="login-button" class="auth-btn login-btn">Đăng nhập</a>
+                        <a href="register.html" id="register-button" class="auth-btn register-btn">Đăng ký</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="search-container">
+            <form class="search-form" onsubmit="return false;">
+                <input type="text" placeholder="Tìm kiếm sản phẩm..." class="search-input" id="search-input">
+                <button type="button" class="search-button" onclick="performSearch()">
+                    <i class="fa fa-search search-icon"></i>
+                </button>
+            </form>
+            <div id="suggestions" class="suggestions"></div>
+        </div>
+
+        <div class="search-results" id="search-results">
+            <h3>Kết quả tìm kiếm</h3>
+        </div>
+        
+        <div class="banner-container">
+            <div class="banner">
+                <img src="image/ban1.webp" alt="Banner 1">
+                <img src="image/ban2.webp" alt="Banner 2">
+                <img src="image/ban3.webp" alt="Banner 3">
+                <img src="image/ban4.webp" alt="Banner 4">
+                <img src="image/ban5.webp" alt="Banner 5">
+            </div>
+        </div>
+
+        <section id="products">
+            <h2>Sản phẩm nổi bật</h2>
+            <div class="products-list">
+
+                                <!---- vợt Yonex ---->
+
+                                                <!----- Vợt 1 ----->
+
+                <div class="brand-section">
+
+                    <h3>Yonex</h3>
+
+                    <div class="product">
+                        <a href="products-detail.html" class="product-link">
+                            <img src="image/88d.jpg" alt="Vợt cầu lông Yonex" class="product-image">
+                            <h4 class="product-title">Vợt cầu lông Yonex Astrox 88D Pro</h4>
+                            <p>Giá: 4,000,000 VND</p>
+
+                            <div class="product-details">
+                                <p><strong>Mô tả:</strong> Yonex Astrox 88D Pro là lựa chọn tuyệt vời cho người chơi tấn công mạnh mẽ.</p>
+                                <p><strong>Trọng lượng:</strong> 4U (Khoảng 83g)</p>
+                                <p><strong>Độ cứng:</strong> Cứng</p>
+                                <p><strong>Điểm cân bằng:</strong> Nặng đầu</p>
+                            </div>
+                        </a>
+
+                        <div class="product-buttons">
+                            <button class="btn add-to-cart">Giỏ hàng</button>
+                            <button class="btn buy-now">Mua ngay</button>
+                        </div>
+                    </div>
+
+                                                <!----- Vợt 2 ----->
+
+                    <div class="product">
+                        <img src="image/nnf800.jpg" alt="Vợt cầu lông Yonex" class="product-image">
+                        <h4 class="product-title">Vợt cầu lông Yonex Nanoflare 800</h4>
+                        <p>Giá: 3,500,000 VND</p>
+
+                        <div class="product-details">
+                            <p><strong>Mô tả:</strong> Yonex Nanoflare 800 là lựa chọn tuyệt vời cho người chơi thiên về tốc độ và phản xạ nhanh.</p>
+                            <p><strong>Trọng lượng:</strong> 4U (Khoảng 83g)</p>
+                            <p><strong>Độ cứng:</strong> Cứng</p>
+                            <p><strong>Điểm cân bằng:</strong> Nặng đầu</p>
+                        </div>
+
+                        <div class="product-buttons">
+                            <button class="btn add-to-cart">Giỏ hàng</button>
+                            <button class="btn buy-now">Mua ngay</button>
+                        </div>
+                    </div>
+
+
+                                                <!----- Vợt 3 ----->
+
+                    <div class="product">
+                        <img src="image/arc11pro.jpg" alt="Vợt cầu lông Yonex" class="product-image">
+                        <h4 class="product-title">Vợt cầu lông Yonex Arcsaber 11 Pro</h4>
+                        <p>Giá: 4,380,000 VND</p>
+
+                        <div class="product-details">
+                            <p><strong>Mô tả:</strong> Yonex Arcsaber 11 Pro là lựa chọn tuyệt vời cho người chơi kiểm soát trận đấu và phòng thủ ổn định.</p>
+                            <p><strong>Trọng lượng:</strong> 4U (Khoảng 83g)</p>
+                            <p><strong>Độ cứng:</strong> Cứng</p>
+                            <p><strong>Điểm cân bằng:</strong> Nặng đầu</p>
+                        </div>
+
+                        <div class="product-buttons">
+                            <button class="btn add-to-cart">Giỏ hàng</button>
+                            <button class="btn buy-now">Mua ngay</button>
+                        </div>
+                    </div>
+
+
+                                                <!----- Vợt 4 ----->
+
+                    <div class="product">
+                        <img src="image/duorazstrike.jpg" alt="Vợt cầu lông Yonex" class="product-image">
+                        <h4 class="product-title">Vợt cầu lông Duora Z-Strike</h4>
+                        <p>Giá: 3,380,000 VND</p>
+
+                        <div class="product-details">
+                            <p><strong>Mô tả:</strong> Yonex Duora Z-Strike là lựa chọn tuyệt vời cho người chơi toàn diện, cần khả năng tấn công mạnh mẽ.</p>
+                            <p><strong>Trọng lượng:</strong> 4U (Khoảng 83g)</p>
+                            <p><strong>Độ cứng:</strong> Cứng</p>
+                            <p><strong>Điểm cân bằng:</strong> Nặng đầu</p>
+                        </div>
+
+                        <div class="product-buttons">
+                            <button class="btn add-to-cart">Giỏ hàng</button>
+                            <button class="btn buy-now">Mua ngay</button>
+                        </div>
+                    </div>
+                </div>
+
+                            <!-- vợt Lining -->
+
+                                                <!----- Vợt 1 ----->
+
+                <div class="brand-section">
+
+                    <h3>Lining</h3>
+
+                    <div class="product">
+                        <img src="image/axf100.jpg" alt="Vợt cầu lông Lining" class="product-image">
+                        <h4 class="product-title">Vợt cầu lông Lining Axforce 100</h4>
+                        <p>Giá: 3,8000,000 VND</p>
+
+                        <div class="product-details">
+                            <p><strong>Mô tả:</strong> Lining Axforce 100 là lựa chọn tuyệt vời cho người chơi tấn công mạnh từ cuối sân</p>
+                            <p><strong>Trọng lượng:</strong> 4U (Khoảng 83g)</p>
+                            <p><strong>Độ cứng:</strong> Cứng</p>
+                            <p><strong>Điểm cân bằng:</strong> Nặng đầu</p>
+                        </div>
+
+                        <div class="product-buttons">
+                            <button class="btn add-to-cart">Giỏ hàng</button>
+                            <button class="btn buy-now">Mua ngay</button>
+                        </div>
+                    </div>
+
+                                                <!----- Vợt 2 ----->
+
+                    <div class="product">
+                        <img src="image/clb900.jpg" alt="Vợt cầu lông Lining" class="product-image">
+                        <h4 class="product-title">Vợt cầu lông Lining 3D Calibar 900</h4>
+                        <p>Giá: 3,939,000 VND</p>
+
+                        <div class="product-details">
+                            <p><strong>Mô tả:</strong> Lining 3D Calibar 900 là lựa chọn tuyệt vời cho người chơi tấn công với sức mạnh và linh hoạt.</p>
+                            <p><strong>Trọng lượng:</strong> 4U (Khoảng 83g)</p>
+                            <p><strong>Độ cứng:</strong> Cứng</p>
+                            <p><strong>Điểm cân bằng:</strong> Nặng đầu</p>
+                        </div>
+
+                        <div class="product-buttons">
+                            <button class="btn add-to-cart">Giỏ hàng</button>
+                            <button class="btn buy-now">Mua ngay</button>
+                        </div>
+                    </div>
+
+                                                <!----- Vợt 3 ----->
+
+                    <div class="product">
+                        <img src="image/hbt9000.jpg" alt="Vợt cầu lông Lining" class="product-image">
+                        <h4 class="product-title">Vợt cầu lông Lining Halbertec 9000</h4>
+                        <p>Giá: 4,100,000 VND</p>
+
+                        <div class="product-details">
+                            <p><strong>Mô tả:</strong> Lining Halbertec 9000 là lựa chọn tuyệt vời cho người chơi tấn công cần sự ổn định và kiểm soát.</p>
+                            <p><strong>Trọng lượng:</strong> 4U (Khoảng 83g)</p>
+                            <p><strong>Độ cứng:</strong> Cứng</p>
+                            <p><strong>Điểm cân bằng:</strong> Nặng đầu</p>
+                        </div>
+
+                        <div class="product-buttons">
+                            <button class="btn add-to-cart">Giỏ hàng</button>
+                            <button class="btn buy-now">Mua ngay</button>
+                        </div>
+                    </div>
+
+                                                <!----- Vợt 4 ----->
+
+                    <div class="product">
+                        <img src="image/bladex900moon.jpg" alt="Vợt cầu lông Lining" class="product-image">
+                        <h4 class="product-title">Vợt cầu lông Lining Bladex 900 Moon</h4>
+                        <p>Giá: 4,080,000 VND</p>
+
+                        <div class="product-details">
+                            <p><strong>Mô tả:</strong> Lining Bladex 900 Moon là lựa chọn tuyệt vời cho người chơi tấn công nhanh và mạnh từ cuối sân.</p>
+                            <p><strong>Trọng lượng:</strong> 4U (Khoảng 83g)</p>
+                            <p><strong>Độ cứng:</strong> Cứng</p>
+                            <p><strong>Điểm cân bằng:</strong> Nặng đầu</p>
+                        </div>
+
+                        <div class="product-buttons">
+                            <button class="btn add-to-cart">Giỏ hàng</button>
+                            <button class="btn buy-now">Mua ngay</button>
+                        </div>
+                    </div>
+                </div>
+
+                                    <!-- Giày Yonex -->
+
+                                                <!------ Giày 1 ------>
+
+                <div class="brand-section">
+
+                    <h3>Giày Yonex</h3>
+
+                    <div class="product">
+                        <img src="image/65z3.jpg" alt="Giày cầu lông Yonex" class="product-image">
+                        <h4 class="product-title">Giày cầu lông Yonex SHB 65z3 Wide</h4>
+                        <p>Giá: 2,450,000 VND</p>
+
+                        <div class="product-details">
+                            <p><strong>Thương hiệu:</strong>  Yonex</p>
+                            <p><strong>Màu sắc:</strong> Trắng Cam</p>
+                            <p><strong>Mặt trên:</strong> Sợi tổng hợp</p>
+                            <p><strong>Đế:</strong> Power Cushion+, da tổng hợp, cao su</p>
+                        </div>
+
+                        <div class="product-buttons">
+                            <button class="btn add-to-cart">Giỏ hàng</button>
+                            <button class="btn buy-now">Mua ngay</button>
+                        </div>
+                    </div>
+
+                                                <!------ Giày 2 ------>
+
+                    <div class="product">
+                        <img src="image/88dial3.webp" alt="Giày cầu lông Yonex" class="product-image">
+                        <h4 class="product-title">Giày cầu lông Yonex 88 Dial 3</h4>
+                        <p>Giá: 2,920,000 VND</p>
+
+                        <div class="product-details">
+                            <p><strong>Thương hiệu:</strong>  Yonex</p>
+                            <p><strong>Màu sắc:</strong> Trắng - Cam - Xanh Mint</p>
+                            <p><strong>Mặt trên:</strong> Sợi tổng hợp cao cấp</p>
+                            <p><strong>Đế:</strong> Đế cao su siêu bám sân + nhựa tổng hợp cao cấp</p>
+                        </div>
+
+                        <div class="product-buttons">
+                            <button class="btn add-to-cart">Giỏ hàng</button>
+                            <button class="btn buy-now">Mua ngay</button>
+                        </div>
+                    </div>
+
+                                                <!------ Giày 3 ------>
+
+                    <div class="product">
+                        <img src="image/comfortZ3.webp" alt="Giày cầu lông Yonex" class="product-image">
+                        <h4 class="product-title">Giày cầu lông Yonex Power Cushion Comfort Z3</h4>
+                        <p>Giá: 2,950,000 VND</p>
+
+                        <div class="product-details">
+                            <p><strong>Thương hiệu:</strong>  Yonex</p>
+                            <p><strong>Màu sắc:</strong> Đen - Xanh Mint</p>
+                            <p><strong>Mặt trên:</strong> Sợi tổng hợp</p>
+                            <p><strong>Đế:</strong> cao su + nhựa tổng hợp</p>
+                        </div>
+
+                        <div class="product-buttons">
+                            <button class="btn add-to-cart">Giỏ hàng</button>
+                            <button class="btn buy-now">Mua ngay</button>
+                        </div>
+                    </div>
+
+                                                <!------ Giày 4 ------>
+
+                    <div class="product">
+                        <img src="image/aerusZ2.webp" alt="Giày cầu lông Yonex" class="product-image">
+                        <h4 class="product-title">Giày cầu lông Yonex Aerus Z2 Men 2024</h4>
+                        <p>Giá: 2,689,000 VND</p>
+
+                        <div class="product-details">
+                            <p><strong>Thương hiệu:</strong>  Yonex</p>
+                            <p><strong>Màu sắc:</strong> Ruby red</p>
+                            <p><strong>Mặt trên:</strong> Sợi tổng hợp</p>
+                            <p><strong>Đế:</strong> cao su + nhựa tổng hợp</p>
+                        </div>
+
+                        <div class="product-buttons">
+                            <button class="btn add-to-cart">Giỏ hàng</button>
+                            <button class="btn buy-now">Mua ngay</button>
+                        </div>
+                    </div>
+                </div>
+
+                                    <!-- Giày Lining -->
+
+                                                    <!------ Giày 1 ------>
+
+                <div class="brand-section">
+
+                    <h3>Giày Lining</h3>
+
+                    <div class="product">
+                        <img src="image/bladepro.jpg" alt="Giày cầu lông Lining" class="product-image">
+                        <h4 class="product-title">Giày cầu lông Lining AYAT005-1</h4>
+                        <p>Giá: 2,330,000 VND</p>
+
+                        <div class="product-details">
+                            <p><strong>Thương hiệu:</strong>  Lining</p>
+                            <p><strong>Màu sắc:</strong> Trắng</p>
+                            <p><strong>Mặt trên:</strong> Da tổng hợp</p>
+                            <p><strong>Đế:</strong> cao su + EVA</p>
+                        </div>
+                        
+                        <div class="product-buttons">
+                            <button class="btn add-to-cart">Giỏ hàng</button>
+                            <button class="btn buy-now">Mua ngay</button>
+                        </div>
+                    </div>
+
+                                                <!------ Giày 2 ------>
+
+                    <div class="product">
+                        <img src="image/ayazt003-1.webp" alt="Giày cầu lông Lining" class="product-image">
+                        <h4 class="product-title">Giày cầu lông Lining AYAT003-1</h4>
+                        <p>Giá: 3,000,000 VND</p>
+
+                        <div class="product-details">
+                            <p><strong>Thương hiệu:</strong>  Lining</p>
+                            <p><strong>Màu sắc:</strong> Đen</p>
+                            <p><strong>Mặt trên:</strong> Textile + Synthelic Leather + TPU</p>
+                            <p><strong>Đế:</strong> Đế ngoài cao su + Đế giữa Rubber + EVA cao cấp</p>
+                        </div>
+
+                        <div class="product-buttons">
+                            <button class="btn add-to-cart">Giỏ hàng</button>
+                            <button class="btn buy-now">Mua ngay</button>
+                        </div>
+                    </div>
+
+                                                <!------ Giày 3 ------>
+
+                    <div class="product">
+                        <img src="image/ayau005-1.webp" alt="Giày cầu lông Lining" class="product-image">
+                        <h4 class="product-title">Giày cầu lông Lining AYAU005-1 Olympic Paris</h4>
+                        <p>Giá: 2,990,000 VND</p>
+
+                        <div class="product-details">
+                            <p><strong>Thương hiệu:</strong>  Lining</p>
+                            <p><strong>Màu sắc:</strong> Trắng phối xanh dương và đỏ</p>
+                            <p><strong>Mặt trên:</strong> Dệt + TPU + Tổng hợp</p>
+                            <p><strong>Đế:</strong> Cao su, Đế giữa PHYLON, TPu</p>
+                        </div>
+
+                        <div class="product-buttons">
+                            <button class="btn add-to-cart">Giỏ hàng</button>
+                            <button class="btn buy-now">Mua ngay</button>
+                        </div>
+                    </div>
+
+                                                <!------ Giày 4 ------>
+
+                    <div class="product">
+                        <img src="image/ayzu015-1.webp" alt="Giày cầu lông Lining" class="product-image">
+                        <h4 class="product-title">Giày cầu lông Lining AYZUT015-1</h4>
+                        <p>Giá: 2,150,000 VND</p>
+
+                        <div class="product-details">
+                            <p><strong>Thương hiệu:</strong>  Lining</p>
+                            <p><strong>Màu sắc:</strong> Trắng xanh tím</p>
+                            <p><strong>Mặt trên:</strong> Vải + da tổng hợp</p>
+                            <p><strong>Đế:</strong> Đế ngoài cao su + đế giữa PHYLON + TPU + sợi carbon</p>
+                        </div>
+
+                        <div class="product-buttons">
+                            <button class="btn add-to-cart">Giỏ hàng</button>
+                            <button class="btn buy-now">Mua ngay</button>
+                        </div>
+                    </div>
+                </div>
+                                    <!-- Quả cầu lông -->
+
+                <div class="brand-section">
+
+                    <h3>Quả cầu lông</h3>
+
+                    <div class="product">
+                        <img src="image/yonexS50.webp" alt="Quả cầu Yonex" class="product-image">
+                        <h4 class="product-title" style="margin-bottom: 50px;">Quả cầu lông Yonex AS-50</h4>
+                        <p>Giá: 1,050,000 VND / Hộp</p>
+
+                        <div class="product-details">
+                            <p><strong>Quả cầu lông cao cấp từ Yonex</strong></p>
+                            <p><strong>Số lượng: 12quả/ống</strong></p>
+                            <p><strong>Tốc độ: Trung bình</strong></p>
+                            <p>Độ bền cao, ổn định trong mọi điều kiện thời tiết</p>
+                            <p>Phù hợp cho cả thi đấu và tập luyện</p>
+                        </div>
+
+                        <div class="product-buttons">
+                            <button class="btn add-to-cart">Giỏ hàng</button>
+                            <button class="btn buy-now">Mua ngay</button>
+                        </div>
+                    </div>    
+                    
+                    <div class="product">
+                        <img src="image/victorLark5.webp" alt="Quả cầu Victor" class="product-image">
+                        <h4 class="product-title" style="margin-bottom: 50px;">Quả cầu lông Victor Lark 5</h4>
+                        <p>Giá: 290,000 VND / Hộp</p>
+                            
+                        <div class="product-details">
+                            <p><strong>Quả cầu lông cao cấp từ Victor</strong></p>
+                            <p><strong>Số lượng: 12quả/ống</strong></p>
+                            <p><strong>Tốc độ: Nhanh</strong></p>
+                            <p>Độ bền cao, ổn định trong mọi điều kiện thời tiết</p>
+                            <p>Phù hợp cho cả thi đấu và tập luyện</p>
+                        </div>
+
+                        <div class="product-buttons">
+                            <button class="btn add-to-cart">Giỏ hàng</button>
+                            <button class="btn buy-now">Mua ngay</button>
+                        </div>
+                    </div>
+                </div>
+
+                                    <!-- Phụ kiện cầu lông -->
+                <div class="brand-section">
+
+                    <h3>Phụ kiện cầu lông</h3>
+
+                    <div class="product">
+
+                        <img src="image/vo75th.webp" alt="Vớ Yonex" class="product-image">
+                        <h4 class="product-title" style="margin-bottom: 50px;">Vớ cầu lông Yonex 75th</h4>
+                        <p>Giá: 60,000 VND / Đôi</p>
+
+                        <div class="product-details">
+                            <p>Vớ cầu lông cao cấp từ Yonex</p>
+                            <p>Chất liệu: 75% Polyester, 25% Spandex</p>
+                            <p>Độ bền cao, thoáng khí</p>
+                            <p>Ghi chú: Sản phẩm được sản xuất để kỷ niệm 75 năm thành lập Yonex</p>
+                        </div>
+
+                        <div class="product-buttons">
+                            <button class="btn add-to-cart">Giỏ hàng</button>
+                            <button class="btn buy-now">Mua ngay</button>
+                        </div>
+                    </div>
+
+                    <div class="product">
+                        <img src="image/mockhoa.webp" alt="Móc khóa cầu lông" class="product-image">
+                        <h4 class="product-title" style="margin-bottom: 50px;">Móc khóa cầu lông</h4>
+                        <p>Giá: 25,000 VND / Cái</p>
+
+                        <div class="product-details">
+                            <p>Móc khóa cầu lông nhỏ gọn, tiện dụng</p>
+                            <p>Chất liệu: Nhựa</p>
+                            <p>Dễ dàng gắn vào túi xách hay quần áo</p>
+                            <p>Lý tưởng cho cả thi đấu và tập luyện</p>
+                        </div>
+
+                        <div class="product-buttons">
+                            <button class="btn add-to-cart">Giỏ hàng</button>
+                            <button class="btn buy-now">Mua ngay</button>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <footer>
+            <p>&copy; Cửa hàng vợt cầu lông</p>
+        </footer>
+    </div>
+
+    <script src="js/Trangchu.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/search.js"></script>
+    <script src="https://kit.fontawesome.com/dc2acc0315.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/products-yonex.css">
+    <title>Sản phẩm Yonex</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-title">
+                <img src="image/logo.jpg" alt="Badminton Logo" class="logo">
+                <h1>Cửa hàng cầu lông</h1>
+            </div>
+            <nav id="menu">
+                <ul>
+                    <li class="main-menu-item"><a href="Trangchu.html">Trang chủ</a></li>
+                    <li class="main-menu-item">
+                        <a href="#products">Sản phẩm</a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="#">Vợt cầu lông</a>
+                                <ul class="sub-menu-child">
+                                    <li><a href="products-yonex.html">Yonex</a></li>
+                                    <li><a href="products-lining.html">Lining</a></li>
+                                    <li><a href="products-victor.html">Victor</a></li>
+                                    <li><a href="products-mizuno.html">Mizuno</a></li>
+                                </ul>
+                            </li>    
+
+                            <li>
+                                <a href="#">Giày cầu lông</i></a>
+                                <ul class="sub-menu-child">
+                                    <li><a href="shoes-yonex.html">Yonex</a></li>
+                                    <li><a href="shoes-lining.html">Lining</a></li>
+                                    <li><a href="shoes-victor.html">Victor</a></li>
+                                    <li><a href="shoes-mizuno.html">Mizuno</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">Quả cầu lông</a>
+                                <ul class="sub-menu-child">
+                                    <li><a href="products-yonex-ball.html">Yonex</a></li>
+                                    <li><a href="products-victor-ball.html">Victor</a></li>
+                                    <li><a href="products-lining-ball.html">Lining</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">Phụ kiện cầu lông</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="main-menu-item"><a href="about.html">Thông tin</a></li>
+                    <li class="main-menu-item"><a href="contact.html">Liên hệ</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-right">
+                <div id="cart-container">
+                    <div id="cart-icon">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="cart-count">0</span>
+                    </div>
+                </div>
+
+                <div class="auth-buttons">
+                    <a href="login.html" id="login button" class="auth-btn login-btn">Đăng nhập</a>
+                    <a href="register.html" id="register button" class="auth-btn register-btn">Đăng ký</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="products" style="margin-top: 120px;">
+        <h2>Sản phẩm Yonex</h2>
+
+        <div class="container">
+            <!-- Phần filter-container -->
+            <div class="filter-container">
+                <div class="filter-section">
+                    <h3>CHỌN MỨC GIÁ</h3>
+                    <label><input type="checkbox"> Giá dưới 500.000đ</label><br>
+                    <label><input type="checkbox"> 500.000đ - 1 triệu</label><br>
+                    <label><input type="checkbox"> 1 - 2 triệu</label><br>
+                    <label><input type="checkbox"> 2 - 3 triệu</label><br>
+                    <label><input type="checkbox"> Giá trên 3 triệu</label><br>
+                </div>
+
+                <div class="filter-section">
+                    <h3>THƯƠNG HIỆU</h3>
+                    <label><input type="checkbox"> Yonex</label><br>
+                    <label><input type="checkbox"> Lining</label><br>
+                    <label><input type="checkbox"> Victor</label><br>
+                    <label><input type="checkbox"> Mizuno</label><br>
+                </div>
+
+                <div class="filter-section">
+                    <h3>CHIỀU DÀI VỢT</h3>
+                    <label><input type="checkbox" name="price"> 665mm</label><br>
+                    <label><input type="checkbox" name="price"> 670mm</label><br>
+                    <label><input type="checkbox" name="price"> 675mm</label><br>
+                </div>
+
+                <div class="filter-section">
+                    <h3>CHIỀU DÀI VỢT</h3>
+                    <label><input type="checkbox" name="price"> 200mm</label><br>
+                    <label><input type="checkbox" name="price"> 205mm</label><br>
+                    <label><input type="checkbox" name="price"> 210mm</label><br>
+                </div>
+
+                <div class="filter-section">
+                    <h3>SWINGWEIGHT </h3>
+                    <label><input type="checkbox"> Dưới 82 kg/cm2</label><br>
+                    <label><input type="checkbox"> 82 - 84 kg/cm2</label><br>
+                    <label><input type="checkbox"> 84 - 86 kg/cm2</label><br>
+                    <label><input type="checkbox"> 86 - 88 kg/cm2</label><br>
+                    <label><input type="checkbox"> Trên 88 kg/cm2</label><br>
+                </div>
+
+                <div class="filter-section">
+                    <h3>TRỌNG LƯỢNG </h3>
+                    <label><input type="checkbox"> 2U: 90 - 94g</label><br>
+                    <label><input type="checkbox"> 3U: 85 - 89g</label><br>
+                    <label><input type="checkbox"> 4U: 80 - 84g</label><br>
+                    <label><input type="checkbox"> 5U: 75 - 79g</label><br>
+                    <label><input type="checkbox"> F: 70 - 75g</label><br>
+                </div>
+
+                <button class="btn apply-filters">Áp dụng bộ lọc</button>
+            </div>
+
+            <!-- Nội dung sản phẩm -->
+        
+        <div class="products-list">
+            <!-- Sản phẩm Yonex -->
+
+            <div class="product">
+                <a href="products-detail.html" class="product-link" style="text-decoration: none;">
+                    <img src="image/88d_2.webp" alt="Vợt cầu lông Yonex" class="product-image">
+                    <h4 class="product-title">Vợt cầu lông Yonex Astrox 88D Pro</h4>
+                    <p>Giá: 4,000,000 VND</p>
+                </a>
+                <div class="product-buttons">
+                    <button class="btn add-to-cart">Giỏ hàng</button>
+                    <button class="btn buy-now">Mua ngay</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <a href="" class="product-link" style="text-decoration: none;">
+                    <img src="image/nnf800.jpg" alt="Vợt cầu lông Yonex" class="product-image">
+                    <h4 class="product-title">Vợt cầu lông Yonex Nanoflare 800</h4>
+                    <p>Giá: 3,500,000 VND</p>
+                    <div class="product-buttons">
+                        <button class="btn add-to-cart">Giỏ hàng</button>
+                        <button class="btn buy-now">Mua ngay</button>
+                    </div>
+                </a>
+            </div>
+
+            <div class="product">
+                <a href="" class="product-link" style="text-decoration: none;">
+                    <img src="image/arc11pro.jpg" alt="Vợt cầu lông Yonex" class="product-image">
+                    <h4 class="product-title">Vợt cầu lông Yonex Arcsaber 11 Pro</h4>
+                    <p>Giá: 4,300,000 VND</p>
+                    <div class="product-buttons">
+                        <button class="btn add-to-cart">Giỏ hàng</button>
+                        <button class="btn buy-now">Mua ngay</button>
+                    </div>
+                </a>
+            </div>
+
+            <div class="product">
+                <a href="" class="product-link" style="text-decoration: none;">
+                    <img src="image/duorazstrike.jpg" alt="Vợt cầu lông Yonex" class="product-image">
+                    <h4 class="product-title">Vợt cầu lông Yonex Duora Z-Strike</h4>
+                    <p>Giá: 3,380,000 VND</p>
+                    <div class="product-buttons">
+                        <button class="btn add-to-cart">Giỏ hàng</button>
+                        <button class="btn buy-now">Mua ngay</button>
+                    </div>
+                </a>
+            </div>
+
+            <div class="product">
+                <a href="" class="product-link" style="text-decoration: none;">
+                    <img src="image/duorazstrike.jpg" alt="Vợt cầu lông Yonex" class="product-image">
+                    <h4 class="product-title">Vợt cầu lông Yonex Duora Z-Strike</h4>
+                    <p>Giá: 3,380,000 VND</p>
+                    <div class="product-buttons">
+                        <button class="btn add-to-cart">Giỏ hàng</button>
+                        <button class="btn buy-now">Mua ngay</button>
+                    </div>
+                </a>
+            </div>
+
+            <div class="product">
+                <a href="" class="product-link" style="text-decoration: none;">
+                    <img src="image/duorazstrike.jpg" alt="Vợt cầu lông Yonex" class="product-image">
+                    <h4 class="product-title">Vợt cầu lông Yonex Duora Z-Strike</h4>
+                    <p>Giá: 3,380,000 VND</p>
+                    <div class="product-buttons">
+                        <button class="btn add-to-cart">Giỏ hàng</button>
+                        <button class="btn buy-now">Mua ngay</button>
+                    </div>
+                </a>
+            </div>
+
+            <div class="product">
+                <a href="" class="product-link" style="text-decoration: none;">
+                    <img src="image/duorazstrike.jpg" alt="Vợt cầu lông Yonex" class="product-image">
+                    <h4 class="product-title">Vợt cầu lông Yonex Duora Z-Strike</h4>
+                    <p>Giá: 3,380,000 VND</p>
+                    <div class="product-buttons">
+                        <button class="btn add-to-cart">Giỏ hàng</button>
+                        <button class="btn buy-now">Mua ngay</button>
+                    </div>
+                </a>
+            </div>
+
+            <div class="product">
+                <a href="" class="product-link" style="text-decoration: none;">
+                    <img src="image/duorazstrike.jpg" alt="Vợt cầu lông Yonex" class="product-image">
+                    <h4 class="product-title">Vợt cầu lông Yonex Duora Z-Strike</h4>
+                    <p>Giá: 3,380,000 VND</p>
+                    <div class="product-buttons">
+                        <button class="btn add-to-cart">Giỏ hàng</button>
+                        <button class="btn buy-now">Mua ngay</button>
+                    </div>
+                </a>
+            </div>
+
+            <div class="product">
+                <a href="" class="product-link" style="text-decoration: none;">
+                    <img src="image/duorazstrike.jpg" alt="Vợt cầu lông Yonex" class="product-image">
+                    <h4 class="product-title">Vợt cầu lông Yonex Duora Z-Strike</h4>
+                    <p>Giá: 3,380,000 VND</p>
+                    <div class="product-buttons">
+                        <button class="btn add-to-cart">Giỏ hàng</button>
+                        <button class="btn buy-now">Mua ngay</button>
+                    </div>
+                </a>
+            </div>
+
+            <div class="product">
+                <a href="" class="product-link" style="text-decoration: none;">
+                    <img src="image/duorazstrike.jpg" alt="Vợt cầu lông Yonex" class="product-image">
+                    <h4 class="product-title">Vợt cầu lông Yonex Duora Z-Strike</h4>
+                    <p>Giá: 3,380,000 VND</p>
+                    <div class="product-buttons">
+                        <button class="btn add-to-cart">Giỏ hàng</button>
+                        <button class="btn buy-now">Mua ngay</button>
+                    </div>
+                </a>
+            </div>
+
+            <div class="product">
+                <a href="" class="product-link" style="text-decoration: none;">
+                    <img src="image/duorazstrike.jpg" alt="Vợt cầu lông Yonex" class="product-image">
+                    <h4 class="product-title">Vợt cầu lông Yonex Duora Z-Strike</h4>
+                    <p>Giá: 3,380,000 VND</p>
+                    <div class="product-buttons">
+                        <button class="btn add-to-cart">Giỏ hàng</button>
+                        <button class="btn buy-now">Mua ngay</button>
+                    </div>
+                </a>
+            </div>
+
+            <div class="product">
+                <a href="" class="product-link" style="text-decoration: none;">
+                    <img src="image/duorazstrike.jpg" alt="Vợt cầu lông Yonex" class="product-image">
+                    <h4 class="product-title">Vợt cầu lông Yonex Duora Z-Strike</h4>
+                    <p>Giá: 3,380,000 VND</p>
+                    <div class="product-buttons">
+                        <button class="btn add-to-cart">Giỏ hàng</button>
+                        <button class="btn buy-now">Mua ngay</button>
+                    </div>
+                </a>
+            </div>
+
+            <div class="product">
+                <a href="" class="product-link" style="text-decoration: none;">
+                    <img src="image/duorazstrike.jpg" alt="Vợt cầu lông Yonex" class="product-image">
+                    <h4 class="product-title">Vợt cầu lông Yonex Duora Z-Strike</h4>
+                    <p>Giá: 3,380,000 VND</p>
+                    <div class="product-buttons">
+                        <button class="btn add-to-cart">Giỏ hàng</button>
+                        <button class="btn buy-now">Mua ngay</button>
+                    </div>
+                </a>
+            </div>
+
+            <div class="product">
+                <a href="" class="product-link" style="text-decoration: none;">
+                    <img src="image/duorazstrike.jpg" alt="Vợt cầu lông Yonex" class="product-image">
+                    <h4 class="product-title">Vợt cầu lông Yonex Duora Z-Strike</h4>
+                    <p>Giá: 3,380,000 VND</p>
+                    <div class="product-buttons">
+                        <button class="btn add-to-cart">Giỏ hàng</button>
+                        <button class="btn buy-now">Mua ngay</button>
+                    </div>
+                </a>
+            </div>
+
+            <div class="product">
+                <a href="" class="product-link" style="text-decoration: none;">
+                    <img src="image/duorazstrike.jpg" alt="Vợt cầu lông Yonex" class="product-image">
+                    <h4 class="product-title">Vợt cầu lông Yonex Duora Z-Strike</h4>
+                    <p>Giá: 3,380,000 VND</p>
+                    <div class="product-buttons">
+                        <button class="btn add-to-cart">Giỏ hàng</button>
+                        <button class="btn buy-now">Mua ngay</button>
+                    </div>
+                </a>
+            </div>
+
+            <div class="product">
+                <a href="" class="product-link" style="text-decoration: none;">
+                    <img src="image/duorazstrike.jpg" alt="Vợt cầu lông Yonex" class="product-image">
+                    <h4 class="product-title">Vợt cầu lông Yonex Duora Z-Strike</h4>
+                    <p>Giá: 3,380,000 VND</p>
+                    <div class="product-buttons">
+                        <button class="btn add-to-cart">Giỏ hàng</button>
+                        <button class="btn buy-now">Mua ngay</button>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="pagination">
+        <a href="products-yonex-page-1.html" class="next-page">&laquo; Trang trước</a>
+        <a href="products-yonex-page-1.html" class="page-link">1</a>
+        <span class="current-page">2</span>
+        <a href="products-yonex-page-3.html" class="page-link">3</a>
+        <a href="products-yonex-page-3.html" class="next-page">Trang sau &raquo;</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Cửa hàng vợt cầu lông</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/dc2acc0315.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="js/products.js?v=1.0"></script>
+    <script src="js/Trangchu.js?v=1.0"></script>
+</body>
+
+</html>

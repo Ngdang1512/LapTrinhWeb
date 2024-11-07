@@ -1,0 +1,545 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Header Style */
+header {
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+
+.header-container {         /* Container chứa nội dung bên trong header */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 5px 20px;
+    height: 80px;
+}
+
+header h1 {         /* Tiêu đề chính trong header */
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}   
+
+/* logo */
+.logo-title {
+    display: flex;
+    align-items: center;
+}
+
+@keyframes shine {
+    0% {background-position: 0%;}
+    100% {background-position: 200%;}
+}
+
+.logo-title h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-left: 15px;
+    margin-top: -60px;
+    background-size: 200% auto;
+    animation: shine 3s linear infinite;
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.logo {
+    width: 90px;
+    height: auto;
+    box-shadow: 0px 0px 17px 2px rgba(255, 255, 255, 0.3);
+}
+
+.brand-section {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+}
+
+/* Menu Style */
+#menu {
+    border-color: #333;
+    padding: 3px 0;
+    flex-grow: 1;
+}
+
+.main-menu-ỉtem {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.main-menu-ỉtem > a {
+    display: block;
+    color: white;
+    text-decoration: none;    
+    justify-content: space-between;
+}
+
+.main-menu-ỉtem:hover > .sub-menu {
+    display: block;
+}
+
+#menu ul {          /* Các mục trong menu */
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu ul li {
+    position: relative;
+    margin-right: 15px;
+    justify-content: center;
+    padding: 10px;
+}
+
+#menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+#menu ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#menu > ul > li > a::before {
+    content: "";
+    height: 4px;
+    width: 0;
+    background: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#menu > ul > li:hover >a::before {
+    display: block;
+    width: 100%;
+}
+
+.sub-menu {
+    position: absolute;
+    display: none;
+    background-color: #333;
+    border-radius: 5px;
+    text-transform: none;
+}
+
+.sub-menu li {
+    position: relative;
+    list-style: none;
+    padding: 5px 10px;
+}
+
+.sub-menu li:hover > .sub-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.sub-menu li > a::after {
+    content: '';
+}
+
+.sub-menu > li:hover > .sub-menu-child {
+    display: block;
+}
+
+/* Sub-menu Style */
+#menu ul li > .sub-menu {
+    background-color: #414040;
+    border-radius: 5px;
+    min-width: 200px;
+    display: none;
+    position: absolute;
+    transform: translateX(-85px);
+    top: 40px;
+    text-align: center;
+    left: 50%;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+#menu ul li:hover .sub-menu {
+    display: block;
+}
+
+#menu ul li > .sub-menu a {  
+    display: block;     /* Các mục trong sub-menu */
+    color: white;
+    font-size: 1.2rem;
+    text-align: left;
+    white-space: nowrap;
+    padding: 10px 15px;
+    line-height: 1.4;
+
+}
+
+#menu ul li > .sub-menu li {
+    margin: 0;
+    padding: 0;
+}
+
+#menu ul li > .sub-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sub-menu-child {
+    left: +100%;
+    top: 0;
+    background-color: #444;
+    padding: 10px 0;
+    margin: 0;
+    opacity: 0;
+    visibility: visible;
+    position: absolute;
+    min-width: 200px;
+    border-radius: 0 5px 5px 0;
+    text-transform: none;
+}
+
+.sub-menu li:hover>.sub-menu-child {
+    display: block;
+    opacity: 1;
+}
+
+.sub-menu-child li a {
+    padding: 8px 15px;
+    color: white;
+    display: block;
+    text-decoration: none;
+}
+
+.sub-menu-child li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Cart Icon Styles */
+#menu i {
+    font-size: 24px;
+    float: right;
+    margin-right: 50px;
+    transition: transform 0.3s ease;
+}
+
+#cart-count {
+    position: absolute;
+    top: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+#cart-container {
+    position: relative;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+#cart-icon {
+    font-size: 24px;
+    color: #fff;
+}
+
+#cart-icon.pulse {
+    animation: pulse 0.3s ease-in-out;
+}
+
+#cart-count {
+    position: absolute;
+    top: -10px;
+    right: -20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+@keyframes moveLeftRight {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
+}
+
+#cart-container:hover #cart-icon {
+    animation: moveLeftRight 0.5s ease-in-out infinite;
+}
+
+#cart-items {
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item button {
+    margin-left: 10px;
+}
+
+#cart-total {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.auth-buttons {
+    display: flex;
+}
+
+.auth-btn {
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn {
+    background-color: #4a4a4a;
+    color: white;
+    border: none;
+}
+
+.login-btn:hover {
+    background-color: #333333;
+}
+
+.register-btn {
+    background-color: white;
+    color: #333333;
+    border: 2px solid #4a4a4a;
+}
+
+.register-btn:hover {
+    background-color: #f0f0f0;
+}
+
+/* Điều chỉnh kích thước sản phẩm */
+section#product {
+    padding: 40px 0;
+}
+
+.products-list {
+    display:  flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.product {
+    background-color: white;
+    width: calc(25% - 20px); /* Giảm chiều rộng sản phẩm */
+    height: auto; /* Để cố định theo nội dung */
+    min-height: 400px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.product img {
+    width: 100%; /* Đảm bảo hình ảnh luôn chiếm 100% chiều rộng của sản phẩm */
+    height: 250px; /* Để tự động theo tỷ lệ */
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+    top: 0;
+    position: relative;
+}
+
+.product-title {  
+    font-size: clamp(0.9rem, 1vw, 1.2rem);
+    transition: transform 0.3s ease;
+    position: relative;
+    top: -25px;
+    text-align: center;
+    width: calc(100% - 20%);
+    z-index: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-buttons {          /* Các nút trong product */
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+.product h4 {       /* Tiêu đề sản phẩm */
+    font-size: 1.1rem;
+    margin-bottom: 1px;
+    color: #333;
+    text-align: center;
+    padding: 0 10px;
+    width: calc(100% - 20px);
+}
+
+.product p {        /* Mô tả sản phẩm */
+    color: #666;
+    margin: 5px 0;
+    font-size: 0.9rem;
+    position: absolute;
+    bottom: 50px;
+}
+
+.btn {      /* Nút mua hàng */
+    font-style: 0.7rem;
+    color: #333;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 20px;
+    border: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover {        /* Hiệu ứng khi di chuột qua nút */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* hiệu ứng thêm, mua hàng */
+.add-to-cart {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+}
+
+.add-to-cart:hover {
+    background-color: #e0e0e0;
+}
+
+.buy-now {
+    background-color: #333;
+    color: #fff;
+    margin-left: 5px;
+}
+
+.buy-now:hover {
+    background-color: #555;
+}
+
+/* Các quy tắc khác nếu cần */
+
+.container {
+    display: flex; /* Sử dụng flexbox để sắp xếp phần tử con */
+}
+
+.filter-container {
+    width: 900px; /* Đặt chiều rộng cho filter container */
+    padding: 20px; /* Thêm padding để tạo khoảng cách */
+    background-color: #f9f9f9; /* Màu nền */
+    border: 1px solid #ccc; /* Đường viền cho filter container */
+    border-radius: 5px; /* Bo góc */
+    margin-right: 15px; /* Khoảng cách bên phải */
+    position: sticky; /* Để giữ vị trí khi cuộn trang */
+    top: 10px; /* Giữ cách trên cho sticky */
+}
+
+.filter-section label {
+    display: block; /* Để từng label xuống dòng */
+}
+
+.filter-section label:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination a, .pagination span {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+}
+
+.pagination a:hover {
+    background-color: #ddd;
+}
+
+.pagination .current-page {
+    background-color: #333;
+    color: white;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    margin-top: 50px;
+}
