@@ -13,7 +13,8 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 10px 0;
+    padding: 10px;
+    padding-bottom: 10px;
     text-transform: uppercase;
 }
 
@@ -22,9 +23,9 @@ header {
     align-items: center;
     justify-content: space-between;
     max-width: 1366px;
+    width: 100%;
     margin: 0 auto;
     padding: 5px 20px;
-    height: 80px;
 }
 
 header h1 {         /* Tiêu đề chính trong header */

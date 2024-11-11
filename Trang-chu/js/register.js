@@ -26,6 +26,7 @@ function handleRegister(event) {
 
         // Lưu thông tin người dùng
         localStorage.setItem(user.username, JSON.stringify(user));
+        localStorage.setItem('loggedInUser',JSON.stringify(user));
 
         alert('Đăng ký thành công! Bạn sẽ được chuyển đến trang đăng nhập.');
         window.location.href = 'login.html';

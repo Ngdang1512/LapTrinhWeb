@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin Tài Khoản</title>
+    <link rel="stylesheet" href="css/user-info.css">
+    <link rel="stylesheet" href="css/Trangchu.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-title">
+                <img src="image/logo.jpg" alt="Badminton Logo" class="logo">
+                <h1>Cửa hàng cầu lông</h1>
+            </div>
+            <nav id="menu">
+                <ul>
+                    <li class="main-menu-item"><a href="Trangchu.html">Trang chủ</a></li>
+                    <li class="main-menu-item">
+                        <a href="#products">Sản phẩm</a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="#">Vợt cầu lông</a>
+                                <ul class="sub-menu-child">
+                                    <li><a href="products-yonex-page-1.html">Yonex</a></li>
+                                    <li><a href="products-lining.html">Lining</a></li>
+                                    <li><a href="products-victor.html">Victor</a></li>
+                                    <li><a href="products-mizuno.html">Mizuno</a></li>
+                                </ul>
+                            </li>    
+
+                            <li>
+                                <a href="#">Giày cầu lông</i></a>
+                                <ul class="sub-menu-child">
+                                    <li><a href="shoes-yonex.html">Yonex</a></li>
+                                    <li><a href="shoes-lining.html">Lining</a></li>
+                                    <li><a href="shoes-victor.html">Victor</a></li>
+                                    <li><a href="shoes-mizuno.html">Mizuno</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">Quả cầu lông</a>
+                                <ul class="sub-menu-child">
+                                    <li><a href="products-yonex-ball.html">Yonex</a></li>
+                                    <li><a href="products-victor-ball.html">Victor</a></li>
+                                    <li><a href="products-lining-ball.html">Lining</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">Phụ kiện cầu lông</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="main-menu-item"><a href="about.html">Thông tin</a></li>
+                    <li class="main-menu-item"><a href="contact.html">Liên hệ</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-right">
+                <div id="cart-container">
+                    <div id="cart-icon">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="cart-count">0</span>
+                    </div>
+                </div>
+
+                <div class="auth-buttons">
+                    <div id="user-info" style="display: none;">
+                        <span class="welcome">Xin chào, <span id="user-name"></span></span>
+                    </div>
+
+                    <a href="login.html" id="login-button" class="auth-btn login-btn">Đăng nhập</a>
+                    <a href="register.html" id="register-button" class="auth-btn register-btn">Đăng ký</a>
+                </div>
+
+                <div id="user-icon" style="cursor: pointer; color:white; margin-left: 5px; font-size: 24px;">
+                    <i class="fa-regular fa-circle-user" onclick="window.location.href='user-info.html'"></i>
+                    <span id="Logout" class="logout" onclick="logout()">Đăng xuất <span id="user-name"></span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="user-container">
+        <h1>THÔNG TIN TÀI KHOẢN</h1>
+        <div id="user-info">
+            <span class="welcome" style="color: black;">Xin chào, <span id="user-name-account" class="user-name"></span></span>
+        </div>
+
+        <h2>THÔNG TIN KHÁCH HÀNG</h2>
+        <div class="customer-info">
+            <pre><span class="icon">👤</span>Họ tên: <span id="customer-name"></span></pre>
+            <pre><span class="icon">📤</span>Email: <span id="customer-email"></span></pre>
+            <pre><span class="icon">📞</span>Số ĐT: <span id="customer-phone"></span></pre>
+            <pre><span class="icon">📍</span>Địa chỉ: <span id="customer-address"></span></pre>
+        </div>
+
+        <button class="edit-button" id="edit-button">SỬA THÔNG TIN</button>
+
+        <div id="edit-form" style="display: none;">
+            <h2>SỬA THÔNG TIN KHÁCH HÀNG</h2>
+            <label for="edit-name">Họ Tên:</label>
+            <input type="text" id="edit-name" />
+
+            <label for="edit-email">Email:</label>
+            <input type="text" id="edit-email" />
+
+            <label for="edit-phone">Số ĐT:</label>
+            <input type="text" id="edit-phone" />
+
+            <label for="edit-address">Địa chỉ:</label>
+            <input type="text" id="edit-address" />
+
+            <label for="edit-birthdate">Ngày sinh:</label>
+            <input type="date" id="edit-birthdate" />
+
+            <label for="edit-gender">Giới tính:</label>
+            <select id="edit-gender">
+                <option value="Nam">Nam</option>
+                <option value="Nữ">Nữ</option>
+                <option value="Khác">Khác</option>
+            </select>
+
+            <h2>ĐỔI MẬT KHẨU</h2>
+            <label for="edit-password">Mật khẩu mới:</label>
+            <input type="password" id="edit-password" />
+
+            <label for="edit-password-confirm">Nhập lại mật khẩu:</label>
+            <input type="password" id="edit-password-confirm" />
+            
+            <button id="save-button">Lưu</button>
+            <button id="cancel-button">Hủy</button>
+        </div>
+        
+        <h2>ĐƠN HÀNG CỦA BẠN</h2>
+        <table class="order-table">
+            <thead>
+                <tr>
+                    <th>Đơn hàng</th>
+                    <th>Ngày</th>
+                    <th>Địa chỉ</th>
+                    <th>Giá trị</th>
+                    <th>Tình trạng</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="5" class="no-orders">Không có đơn hàng nào.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="js/user-info.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/Trangchu.js"></script>
+    <script src="js/register.js"></script>
+    <script src="https://kit.fontawesome.com/dc2acc0315.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</body>
+</html>

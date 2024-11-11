@@ -755,36 +755,16 @@ footer {
 }
 
 .welcome {
-    cursor: pointer;
     color: white;
     font-weight: bold;
 }
 
-.user-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    z-index: 1000;
+.logout {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
 }
 
-.user-menu a {
-    display: block;
-    padding: 10px 20px;
-    color: #333;
-    text-decoration: none;
-    white-space: nowrap;
+.logout:hover {
+    text-decoration: underline;
 }
-
-.user-menu a:hover {
-    background-color: #f5f5f5;
-}
-
-.user-info:hover .user-menu {
-    display: block;
-}
-

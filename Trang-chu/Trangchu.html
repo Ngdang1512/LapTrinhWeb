@@ -73,15 +73,15 @@
                     <div class="auth-buttons">
                         <div id="user-info" style="display: none;">
                             <span class="welcome">Xin chào, <span id="user-name"></span></span>
-                            <div class="user-menu">
-                                <a href="#">Thông tin tài khoản</a>
-                                <a href="#">Đơn hàng của tôi</a>
-                                <a href="#">Đăng xuất</a>
-                            </div>
                         </div>
 
                         <a href="login.html" id="login-button" class="auth-btn login-btn">Đăng nhập</a>
                         <a href="register.html" id="register-button" class="auth-btn register-btn">Đăng ký</a>
+                    </div>
+
+                    <div id="user-icon" style="cursor: pointer; color:white; margin-left: 5px; font-size: 24px;">
+                        <i class="fa-regular fa-circle-user" onclick="window.location.href='user-info.html'"></i>
+                        <span id="Logout" class="logout" onclick="logout()">Đăng xuất <span id="user-name"></span></span>
                     </div>
                 </div>
             </div>

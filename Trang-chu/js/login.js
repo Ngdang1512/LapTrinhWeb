@@ -36,16 +36,27 @@ function handleLogin(event) {
             if (user.password === passwordInput.value) {
                 // Lưu trạng thái đăng nhập
                 sessionStorage.setItem('isLoggedIn', 'true');
-                sessionStorage.setItem('loggedInUser', JSON.stringify(user));
-                
-                console.log('Đăng nhập thành công:', user);
-                alert('Đăng nhập thành công!');
+                sessionStorage.setItem('loggedInUser', JSON.stringify(user));                
                 window.location.href = 'Trangchu.html';
             } else {
                 alert('Mật khẩu không đúng!');
+                window.location.href = 'login.html';
             }
         } else {
             alert('Tên đăng nhập không tồn tại!');
+            window.location.href = 'login.html';
         }
     }
 }
+
+document.getElementById('form-login').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+
+    // Giả sử bạn đã xác thực người dùng thành công
+    const username = document.querySelector('.form-input').value; // Lấy tên đăng nhập từ input
+    localStorage.setItem('isLoggedIn', 'true'); // Lưu trạng thái đăng nhập
+    localStorage.setItem('username', username); // Lưu tên đăng nhập (tuỳ chọn)
+
+    // Chuyển hướng đến trang chủ sau khi đăng nhập
+    window.location.href = 'Trangchu.html';
+});
