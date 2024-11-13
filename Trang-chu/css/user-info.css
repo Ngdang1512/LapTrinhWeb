@@ -93,3 +93,65 @@ h2 {
     font-size: 16px;
     padding: 15px;
 }
+
+#edit-form {
+    display: none;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#edit-form h2 {
+    text-align: center;
+    color: #333;
+}
+
+#edit-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+#edit-form input[type="text"],
+#edit-form input[type="email"],
+#edit-form input[type="date"],
+#edit-form input[type="password"],
+#edit-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#edit-form button {
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+#edit-form button:hover {
+    background-color: #ccc;
+}
+
+/* Thêm khoảng cách cho nút hủy */
+#cancel-button {
+    background-color: #f44336;
+    margin-top: 10px;
+}
+
+#cancel-button:hover {
+    background-color: #e53935;
+}
+
+

@@ -7,11 +7,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Kiểm tra xem userData có tồn tại không
         if (userData) {
-            const userName = userData.username;
-            const fullName = userData.name || 'Chưa có tên';
-            const email = userData.email || 'Chưa có email';
-            const phone = userData.phone || 'Chưa có số điện thoại';
-            const address = userData.address || 'Chưa có địa chỉ';
+            const userName = userData.username || '';
+            const fullName = userData.name || '';
+            const email = userData.email || '';
+            const phone = userData.phone  || '';
+            const address = userData.address || '';
 
             // Hiển thị thông tin người dùng
             document.getElementById('customer-name').textContent = fullName;
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     name: document.getElementById('edit-name').value,
                     email: document.getElementById('edit-email').value,
                     phone: document.getElementById('edit-phone').value,
-                    address: document.getElementById('edit-address').value,
+                    address: document.getElementById('edit-address').value, 
                     birthdate: document.getElementById('edit-birthdate').value,
                     gender: document.getElementById('edit-gender').value
                 };

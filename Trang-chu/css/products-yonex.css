@@ -544,3 +544,23 @@ footer {
     bottom: 0;
     margin-top: 50px;
 }
+
+.user-info {
+    position: relative;
+    padding: 10px;
+}
+
+.welcome {
+    color: white;
+    font-weight: bold;
+}
+
+.logout {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.logout:hover {
+    text-decoration: underline;
+}

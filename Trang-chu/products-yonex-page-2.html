@@ -68,8 +68,17 @@
                 </div>
 
                 <div class="auth-buttons">
-                    <a href="login.html" id="login button" class="auth-btn login-btn">Đăng nhập</a>
-                    <a href="register.html" id="register button" class="auth-btn register-btn">Đăng ký</a>
+                    <div id="user-info" style="display: none;">
+                        <span class="welcome">Xin chào, <span id="user-name"></span></span>
+                    </div>
+
+                    <a href="login.html" id="login-button" class="auth-btn login-btn">Đăng nhập</a>
+                    <a href="register.html" id="register-button" class="auth-btn register-btn">Đăng ký</a>
+                </div>
+
+                <div id="user-icon" style="cursor: pointer; color:white; margin-left: 5px; font-size: 24px;">
+                    <i class="fa-regular fa-circle-user" onclick="window.location.href='user-info.html'"></i>
+                    <span id="Logout" class="logout" onclick="logout()">Đăng xuất <span id="user-name"></span></span>
                 </div>
             </div>
         </div>
@@ -346,10 +355,12 @@
         <p>&copy; Cửa hàng vợt cầu lông</p>
     </footer>
 
+    <script src="js/user-info.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/Trangchu.js"></script>
+    <script src="js/register.js"></script>
     <script src="https://kit.fontawesome.com/dc2acc0315.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="js/products.js?v=1.0"></script>
-    <script src="js/Trangchu.js?v=1.0"></script>
 </body>
 
 </html>
