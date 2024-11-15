@@ -1,0 +1,392 @@
+/* Đặt style nền chung cho toàn bộ trang */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-image: url("caulongBG.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container cho form đăng nhập */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Hộp đăng nhập với thiết kế card */
+.login-box {
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 400px;
+}
+
+/* Tiêu đề của form - Admin login */
+.login-box h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Định dạng các nhãn và trường nhập liệu */
+.login-box label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 16px;
+}
+
+.login-box input[type="text"],
+.login-box input[type="email"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.login-box input[type="text"]:focus,
+.login-box input[type="email"]:focus,
+.login-box input[type="password"]:focus {
+    border-color: #4e54c8;
+    outline: none;
+}
+
+/* Nút đăng nhập */
+.login-box input[type="submit"] {
+    background-color: #4e54c8;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.login-box input[type="submit"]:hover {
+    background-color: #3b41b9;
+}
+
+/* Thông báo lỗi */
+#error-message {
+    margin-top: 10px;
+    color: red;
+    font-size: 14px;
+}
+
+/* Thêm liên kết đăng ký */
+.login-box p {
+    margin-top: 15px;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #343a40;
+    color: #fff;
+    height: 100vh;
+    padding: 10px;
+}
+
+.sidebar .nav-link {
+    color: #ddd;
+    margin: 5px 0;
+}
+
+.sidebar .nav-link.active {
+    color: #fff;
+    background-color: #007bff;
+}
+
+/* Container chính của trang quản trị */
+.dashboard-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 1000px;
+    width: 100%;
+    margin: 20px auto;
+}
+
+/* Tiêu đề của trang quản trị */
+.dashboard-title {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Khung (Card) */
+.card {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Container cho các khung */
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.statistics {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9); /* Nền bán trong suốt */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.statistics h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.stat-box {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.stat-box p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.stat-box span {
+    font-weight: normal;
+    color: #007bff; /* Màu xanh cho số liệu thống kê */
+}
+
+
+/* Nút đăng xuất */
+.logout-btn {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+}
+
+/* Responsive styles */
+#error-message {
+    margin-top: 10px;
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.menu-item {
+    padding: 10px;
+}
+
+.menu-group {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.menu-group .nav-link {
+    color: #007bff;
+    transition: color 0.3s;
+}
+
+.menu-group .nav-link:hover {
+    color: #0056b3;
+}
+
+.admin-section {
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 1000px;
+}
+
+/* Tiêu đề của trang */
+.admin-section h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    font-size: 28px;
+    border-bottom: 2px solid #4e54c8;
+    padding-bottom: 10px;
+}
+
+/* Nút thêm người dùng */
+button {
+    background-color: #4e54c8;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3b41b9;
+}
+
+/* Form thêm người dùng */
+#add-user-form {
+    background-color: #e9ecef;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#add-user-form label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+#add-user-form input[type="text"],
+#add-user-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Bảng người dùng */
+#user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#user-table thead {
+    background-color: #4e54c8;
+    color: #fff;
+}
+
+#user-table th, #user-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#user-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Các nút hành động */
+.action-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-btn {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+.edit-btn:hover {
+    background-color: #e0a800;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Phần thống kê */
+.card-header {
+    background-color: #007bff;
+    color: white;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-image: url(caulongBG.jfif);
+}
+
+.btn-info {
+    color: white;
+    text-decoration: none;
+}
+
+h2, h4 {
+    font-family: Arial, sans-serif;
+}
+
+/* Responsive cho thiết bị di động */
+@media (max-width: 768px) {
+    .admin-section {
+        width: 95%;
+    }
+
+    #user-table th, #user-table td {
+        padding: 8px;
+    }
+
+    button {
+        padding: 8px 15px;
+    }
+}
