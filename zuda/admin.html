@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Admin Login</title>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Admin Login</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <input type="submit" value="Login">
+            </form>
+            <div id="error-message" style="display: none; color: red; font-weight: bold; font-size: 18px;">Sai thông tin đăng nhập</div>
+            <p>Chưa có tài khoản? <a href="trangdangki.html">Đăng ký tại đây</a>.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Ngăn chặn hành động mặc định của form
+
+            const usernameInput = document.getElementById('username').value;
+            const passwordInput = document.getElementById('password').value;
+            const emailInput = document.getElementById('email').value;
+
+            // Lấy thông tin từ localStorage
+            const userData = JSON.parse(localStorage.getItem('userData'));
+
+            // Kiểm tra thông tin đăng nhập
+            if (userData && usernameInput === userData.username && passwordInput === userData.password && emailInput === userData.email) {
+                // Nếu thông tin đúng, chuyển đến dashboard
+                window.location.href = 'admin_dashboard.html'; // Thay đổi đến trang admin dashboard
+            } else {
+                // Hiển thị thông báo lỗi nếu thông tin không đúng
+                document.getElementById('error-message').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

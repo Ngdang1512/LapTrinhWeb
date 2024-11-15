@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Admin Register</title>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Admin Register</h2>
+            <form id="registerForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <input type="submit" value="Register">
+            </form>
+            <div id="success-message" style="color: green; font-weight: bold; display: none;">Đăng ký thành công!</div> <!-- Thêm dòng này -->
+            <p>Đã có tài khoản? <a href="admin.html">Đăng nhập tại đây</a>.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Ngăn chặn hành động mặc định của form
+
+            const usernameInput = document.getElementById('username').value;
+            const passwordInput = document.getElementById('password').value;
+            const emailInput = document.getElementById('email').value;
+
+            // Lưu thông tin vào localStorage
+            const userData = {
+                username: usernameInput,
+                password: passwordInput,
+                email: emailInput
+            };
+
+            localStorage.setItem('userData', JSON.stringify(userData)); // Chuyển đổi đối tượng thành chuỗi
+
+            // Hiển thị thông báo đăng ký thành công
+            document.getElementById('success-message').style.display = 'block';
+
+            // Tự động chuyển về trang đăng nhập sau 2 giây
+            setTimeout(function() {
+                window.location.href = 'admin.html'; // Chuyển về trang đăng nhập
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

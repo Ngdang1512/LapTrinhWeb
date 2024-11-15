@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <!-- Link Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column menu-group">
+                        <li class="nav-item menu-item">
+                            <a class="nav-link active" href="admin_dashboard.html">Trang chủ Admin</a>
+                        </li>
+                        </li>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+                <div class="pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Dashboard</h1>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card text-white bg-primary mb-3">
+                            <div class="card-header">Người dùng</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Quản lý người dùng</h5>
+                                <p class="card-text">Thêm, sửa, và khóa người dùng.</p>
+                                <a href="manageuser.html" class="btn btn-light">Quản lý người dùng</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-white bg-success mb-3">
+                            <div class="card-header">Sản phẩm</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Quản lý sản phẩm</h5>
+                                <p class="card-text">Thêm, sửa và xóa sản phẩm.</p>
+                                <a href="manage_products.html" class="btn btn-light">Quản lý sản phẩm</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-white bg-warning mb-3">
+                            <div class="card-header">Đơn hàng</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Quản lý đơn hàng</h5>
+                                <p class="card-text">Theo dõi và xử lý đơn hàng.</p>
+                                <a href="manage_orders.html" class="btn btn-light">Quản lý đơn hàng</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-white bg-info mb-3">
+                            <div class="card-header">Thống kê</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Xem thống kê</h5>
+                                <p class="card-text">Xem các báo cáo thống kê chi tiết.</p>
+                                <a href="admin_statistics.html" class="btn btn-light">Xem thống kê</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="admin.html" class="btn btn-danger logout-btn">Đăng xuất</a>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

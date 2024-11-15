@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quản lý người dùng</title>
+</head>
+<body>
+    <div class="admin-section">
+        <h2>Quản lý người dùng</h2>
+        <button onclick="showAddUserForm()">Thêm người dùng</button>
+        <div id="add-user-form" style="display: none;">
+            <label for="new-username">Username:</label>
+            <input type="text" id="new-username">
+            <label for="new-email">Email:</label>
+            <input type="email" id="new-email">
+            <button onclick="addUser()">Thêm</button>
+            <button onclick="hideAddUserForm()">Hủy</button>
+        </div>
+        <table id="user-table">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Trạng thái</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Danh sách người dùng sẽ được thêm vào đây -->
+            </tbody>
+        </table>
+        <div id="message" class="message"></div>
+    </div>
+
+    <script>
+        let users = [];
+
+        function showAddUserForm() {
+            document.getElementById('add-user-form').style.display = 'block';
+        }
+
+        function hideAddUserForm() {
+            document.getElementById('add-user-form').style.display = 'none';
+        }
+
+        function addUser() {
+            const username = document.getElementById('new-username').value.trim();
+            const email = document.getElementById('new-email').value.trim();
+
+            if (!username || !email) {
+                showMessage("Vui lòng nhập cả tên người dùng và email.");
+                return;
+            }
+
+            const user = { username, email };
+            users.push(user);
+            renderUsers();
+            hideAddUserForm();
+            showMessage("Đã thêm người dùng thành công!");
+        }
+
+        function renderUsers() {
+            const userTableBody = document.getElementById('user-table').getElementsByTagName('tbody')[0];
+            userTableBody.innerHTML = '';
+            users.forEach((user, index) => {
+                const row = userTableBody.insertRow();
+                const usernameCell = row.insertCell(0);
+                const emailCell = row.insertCell(1);
+                const statusCell = row.insertCell(2);
+                const actionCell = row.insertCell(3);
+
+                usernameCell.innerHTML = `
+                    <span class="username">${user.username}</span>
+                    <input type="text" class="edit-input" value="${user.username}" style="display:none;">
+                `;
+                emailCell.innerHTML = `
+                    <span class="email">${user.email}</span>
+                    <input type="email" class="edit-input" value="${user.email}" style="display:none;">
+                `;
+                statusCell.innerHTML = "Đang hoạt động";
+                actionCell.innerHTML = `
+                    <button class="edit-btn" onclick="editUser(this)">Sửa</button>
+                    <button class="save-btn" style="display:none;" onclick="saveUser(this)">Lưu</button>
+                    <button class="cancel-btn" style="display:none;" onclick="cancelEdit(this)">Hủy</button>
+                    <button class="delete-btn" onclick="deleteUser(this)">Xóa</button>
+                `;
+            });
+        }
+
+        function editUser(button) {
+    const row = button.closest('tr');
+    const usernameInput = row.querySelector('.edit-input:nth-of-type(1)');
+    const emailInput = row.querySelector('.edit-input:nth-of-type(2)');
+    const usernameSpan = row.querySelector('.username');
+    const emailSpan = row.querySelector('.email');
+
+    // Hiển thị các ô nhập liệu và ẩn các giá trị hiện tại
+    usernameInput.style.display = 'inline';
+    emailInput.style.display = 'inline';
+    usernameSpan.style.display = 'none';
+    emailSpan.style.display = 'none';
+
+    // Ẩn nút "Sửa" và hiển thị các nút "Lưu" và "Hủy"
+    button.style.display = 'none';
+    row.querySelector('.save-btn').style.display = 'inline';
+    row.querySelector('.cancel-btn').style.display = 'inline';
+    
+}
+
+
+        function saveUser(button) {
+            const row = button.closest('tr');
+            const usernameInput = row.querySelector('.edit-input:nth-of-type(1)');
+            const emailInput = row.querySelector('.edit-input:nth-of-type(2)');
+            const usernameSpan = row.querySelector('.username');
+            const emailSpan = row.querySelector('.email');
+
+            const newUsername = usernameInput.value.trim();
+            const newEmail = emailInput.value.trim();
+
+            if (!newUsername || !newEmail) {
+                showMessage("Vui lòng nhập cả tên người dùng và email.");
+                return;
+            }
+
+            const userIndex = Array.from(row.parentElement.children).indexOf(row);
+            users[userIndex].username = newUsername;
+            users[userIndex].email = newEmail;
+
+            usernameSpan.textContent = newUsername;
+            emailSpan.textContent = newEmail;
+
+            usernameInput.style.display = 'none';
+            emailInput.style.display = 'none';
+            usernameSpan.style.display = 'inline';
+            emailSpan.style.display = 'inline';
+
+            button.style.display = 'none';
+            row.querySelector('.cancel-btn').style.display = 'none';
+            row.querySelector('.edit-btn').style.display = 'inline';
+            showMessage("Đã lưu thay đổi người dùng thành công!");
+        }
+
+        function cancelEdit(button) {
+            const row = button.closest('tr');
+            const usernameInput = row.querySelector('.edit-input:nth-of-type(1)');
+            const emailInput = row.querySelector('.edit-input:nth-of-type(2)');
+            const usernameSpan = row.querySelector('.username');
+            const emailSpan = row.querySelector('.email');
+
+            usernameInput.value = usernameSpan.textContent;
+            emailInput.value = emailSpan.textContent;
+
+            usernameInput.style.display = 'none';
+            emailInput.style.display = 'none';
+            usernameSpan.style.display = 'inline';
+            emailSpan.style.display = 'inline';
+
+            button.style.display = 'none';
+            row.querySelector('.save-btn').style.display = 'none';
+            row.querySelector('.edit-btn').style.display = 'inline';
+        }
+
+        function deleteUser(button) {
+            const row = button.closest('tr');
+            const index = Array.from(row.parentElement.children).indexOf(row);
+            users.splice(index, 1);
+            renderUsers();
+            showMessage("Đã xóa người dùng thành công!");
+        }
+
+        function showMessage(msg) {
+            const messageDiv = document.getElementById('message');
+            messageDiv.textContent = msg;
+            setTimeout(() => {
+                messageDiv.textContent = '';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
