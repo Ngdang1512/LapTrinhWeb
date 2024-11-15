@@ -690,44 +690,6 @@ section#products {
     font-size: 1.1rem;
 }
 
-.btn {      /* Nút mua hàng */
-    font-style: 1rem;
-    color: #333;
-    padding: 8px 12px;
-    text-decoration: none;
-    border-radius: 20px;
-    border: none;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-    text-align: center;
-}
-
-.btn:hover {        /* Hiệu ứng khi di chuột qua nút */
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-}
-
-/* hiệu ứng thêm, mua hàng */
-.add-to-cart {
-    background-color: #f0f0f0;
-    color: #333;
-    border: 1px solid #ccc;
-    margin-right: 5px;
-}
-
-.add-to-cart:hover {
-    background-color: #e0e0e0;
-}
-
-.buy-now {
-    background-color: #333;
-    color: #fff;
-    margin-left: 5px;
-}
-
-.buy-now:hover {
-    background-color: #555;
-}
-
 footer {
     background-color: #333;
     color: white;
@@ -743,10 +705,6 @@ footer {
     text-decoration: none;
     color: inherit;
     display: block;
-}
-
-.product-link:hover {
-    color: red;
 }
 
 .user-info {

@@ -37,7 +37,7 @@ function handleLogin(event) {
                 // Lưu trạng thái đăng nhập
                 sessionStorage.setItem('isLoggedIn', 'true');
                 sessionStorage.setItem('loggedInUser', JSON.stringify(user));                
-                window.location.href = 'Trangchu.html';
+                window.location.href = 'user-info.html';
             } else {
                 alert('Mật khẩu không đúng!');
                 window.location.href = 'login.html';
@@ -57,6 +57,5 @@ document.getElementById('form-login').addEventListener('submit', function(event)
     localStorage.setItem('isLoggedIn', 'true'); // Lưu trạng thái đăng nhập
     localStorage.setItem('username', username); // Lưu tên đăng nhập (tuỳ chọn)
 
-    // Chuyển hướng đến trang chủ sau khi đăng nhập
-    window.location.href = 'Trangchu.html';
+    window.location.href = 'user-info.html';
 });

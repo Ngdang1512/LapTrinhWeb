@@ -175,6 +175,7 @@
     background-color: #333;
     color: white;
     border-color: #333;
+    text-decoration: none;
 }
 
 .add-to-cart:hover {

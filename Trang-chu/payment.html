@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badminton Racket Store</title>
+    <link rel="stylesheet" href="css/payment.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="checkout-container">
+        <header>
+            <div class="header-container">
+                <div class="logo-title">
+                    <img src="image/logo.jpg" alt="Badminton Logo" class="logo">
+                    <h1>Cửa hàng cầu lông</h1>
+                </div>
+                <nav id="menu">
+                    <ul>
+                        <li class="main-menu-item"><a href="Trangchu.html">Trang chủ</a></li>
+                        <li class="main-menu-item">
+                            <a href="#products">Sản phẩm</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="#">Vợt cầu lông</a>
+                                    <ul class="sub-menu-child">
+                                        <li><a href="products-yonex-page-1.html">Yonex</a></li>
+                                        <li><a href="products-lining.html">Lining</a></li>
+                                        <li><a href="products-victor.html">Victor</a></li>
+                                        <li><a href="products-mizuno.html">Mizuno</a></li>
+                                    </ul>
+                                </li>    
+
+                                <li>
+                                    <a href="#">Giày cầu lông</i></a>
+                                    <ul class="sub-menu-child">
+                                        <li><a href="shoes-yonex.html">Yonex</a></li>
+                                        <li><a href="shoes-lining.html">Lining</a></li>
+                                        <li><a href="shoes-victor.html">Victor</a></li>
+                                        <li><a href="shoes-mizuno.html">Mizuno</a></li>
+                                    </ul>
+                                </li>
+
+                                <li><a href="#">Quả cầu lông</a>
+                                    <ul class="sub-menu-child">
+                                        <li><a href="products-yonex-ball.html">Yonex</a></li>
+                                        <li><a href="products-victor-ball.html">Victor</a></li>
+                                        <li><a href="products-lining-ball.html">Lining</a></li>
+                                    </ul>
+                                </li>
+
+                                <li><a href="#">Phụ kiện cầu lông</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="main-menu-item"><a href="about.html">Thông tin</a></li>
+                        <li class="main-menu-item"><a href="contact.html">Liên hệ</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-right">
+                    <div id="cart-container">
+                        <div id="cart-icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span id="cart-count">0</span>
+                        </div>
+                    </div>
+
+                    <div class="auth-buttons">
+                        <div id="user-info" style="display: none;">
+                            <span class="welcome">Xin chào, <span id="user-name"></span></span>
+                        </div>
+
+                        <a href="login.html" id="login-button" class="auth-btn login-btn">Đăng nhập</a>
+                        <a href="register.html" id="register-button" class="auth-btn register-btn">Đăng ký</a>
+                    </div>
+
+                    <div id="user-icon" style="cursor: pointer; color:white; margin-left: 5px; font-size: 24px;">
+                        <i class="fa-regular fa-circle-user" onclick="window.location.href='user-info.html'"></i>
+                        <span id="Logout" class="logout" onclick="logout()">Đăng xuất <span id="user-name"></span></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="content">
+            <!-- Thông tin nhận hàng -->
+            <div class="shipping-info">
+                <h2>Thông tin nhận hàng</h2>
+                <input type="text" placeholder="Họ và tên người nhận hàng">
+                <input type="text" placeholder="Số điện thoại">
+                <input type="text" placeholder="Địa chỉ">
+                <input type="email" placeholder="Email">
+                <input type="text" placeholder="Ghi chú đơn hàng (tùy chọn)">
+            </div>
+
+            <!-- Thanh toán -->
+            <div class="payment-options">
+                <h2>Thanh toán</h2>
+                <label><input type="radio" name="payment" checked> Thanh toán khi nhận hàng (COD)</label>
+                <label><input type="radio" name="payment"> Thanh toán qua ngân hàng</label>
+                <button class="payment-button red">THANH TOÁN THẺ (Visa, MasterCard, JCB)</button>
+                <button class="payment-button blue">TRẢ GÓP QUA THẺ Visa, Master, JCB</button>
+                <button class="payment-button yellow">MUA TRẢ GÓP</button>
+            </div>
+
+            <!-- Đơn hàng -->
+            <div class="order-summary">
+                <h2>Đơn hàng</h2>
+                <div class="info-product">
+                    <p>Vợt cầu lông Yonex Astrox 99 Tour - Trắng - Có bảo hành</p>
+                    <p>2.970.000 đ</p>
+                </div>
+                <div class="total">
+                    <h3>Tổng cộng</h3>
+                    <p>2.970.000 đ</p>
+                </div>
+                <div class="buttons">
+                    <button onclick="window.location.href='cart.html'" class="btn-edit-cart">Sửa giỏ hàng</button>
+                    <button class="btn-place-order">ĐẶT HÀNG</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/Trangchu.js"></script>
+    <script src="https://kit.fontawesome.com/dc2acc0315.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</body>
+</html>

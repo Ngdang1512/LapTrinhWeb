@@ -48,10 +48,6 @@ function updateProductDisplay(filteredProducts) {
             <img src="${product.image}" alt="${product.name}" class="product-image">
             <h4 class="product-title">${product.name}</h4>
             <p>Giá: ${product.price.toLocaleString()} VND</p>
-            <div class="product-buttons">
-                <button class="btn add-to-cart">Giỏ hàng</button>
-                <button class="btn buy-now">Mua ngay</button>
-            </div>
         `;
         productList.appendChild(productElement);
     });

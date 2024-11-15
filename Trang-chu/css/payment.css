@@ -1,0 +1,455 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+.checkout-container {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.header-container {         /* Container chứa nội dung bên trong header */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1366px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 5px 20px;
+}
+
+header h1 {         /* Tiêu đề chính trong header */
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}   
+
+/* logo */
+.logo-title {
+    display: flex;
+    align-items: center;
+}
+
+@keyframes shine {
+    0% {background-position: 0%;}
+    100% {background-position: 200%;}
+}
+
+.logo-title h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-left: 15px;
+    margin-top: -60px;
+    background-size: 200% auto;
+    animation: shine 3s linear infinite;
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+    max-width: 1366px;
+    width: 100%;
+    height: auto;
+}
+
+.logo {
+    width: 90px;
+    height: auto;
+    box-shadow: 0px 0px 17px 2px rgba(255, 255, 255, 0.3);
+}
+
+#menu {
+    border-color: #333;
+    padding: 3px 0;
+    flex-grow: 1;
+}
+
+.main-menu-ỉtem {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.main-menu-ỉtem > a {
+    display: block;
+    color: white;
+    text-decoration: none;    
+    justify-content: space-between;
+}
+
+.main-menu-ỉtem:hover > .sub-menu {
+    display: block;
+}
+
+#menu ul {          /* Các mục trong menu */
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu ul li {
+    position: relative;
+    margin-right: 15px;
+    justify-content: center;
+    padding: 10px;
+}
+
+#menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+#menu ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#menu > ul > li > a::before {
+    content: "";
+    height: 4px;
+    width: 0;
+    background: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#menu > ul > li:hover >a::before {
+    display: block;
+    width: 100%;
+}
+
+.sub-menu {
+    position: absolute;
+    display: none;
+    background-color: #333;
+    border-radius: 5px;
+    text-transform: none;
+}
+
+.sub-menu li {
+    position: relative;
+    list-style: none;
+    padding: 5px 10px;
+}
+
+.sub-menu li:hover > .sub-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.sub-menu li > a::after {
+    content: '';
+}
+
+.sub-menu > li:hover > .sub-menu-child {
+    display: block;
+}
+
+/* Sub-menu Style */
+#menu ul li > .sub-menu {
+    background-color: #414040;
+    border-radius: 5px;
+    min-width: 200px;
+    display: none;
+    position: absolute;
+    transform: translateX(-85px);
+    top: 40px;
+    text-align: center;
+    left: 50%;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+#menu ul li:hover .sub-menu {
+    display: block;
+}
+
+#menu ul li > .sub-menu a {  
+    display: block;     /* Các mục trong sub-menu */
+    color: white;
+    font-size: 1.2rem;
+    text-align: left;
+    white-space: nowrap;
+    padding: 10px 15px;
+    line-height: 1.4;
+
+}
+
+#menu ul li > .sub-menu li {
+    margin: 0;
+    padding: 0;
+}
+
+#menu ul li > .sub-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sub-menu-child {
+    left: +100%;
+    top: 0;
+    background-color: #444;
+    padding: 10px 0;
+    margin: 0;
+    opacity: 0;
+    visibility: visible;
+    position: absolute;
+    min-width: 200px;
+    border-radius: 0 5px 5px 0;
+    text-transform: none;
+}
+
+.sub-menu li:hover>.sub-menu-child {
+    display: block;
+    opacity: 1;
+}
+
+.sub-menu-child li a {
+    padding: 8px 15px;
+    color: white;
+    display: block;
+    text-decoration: none;
+}
+
+.sub-menu-child li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Cart Icon Styles */
+#menu i {
+    font-size: 24px;
+    float: right;
+    margin-right: 50px;
+    transition: transform 0.3s ease;
+}
+
+#cart-count {
+    position: absolute;
+    top: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+#cart-container {
+    position: relative;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+#cart-icon {
+    font-size: 24px;
+    color: #fff;
+}
+
+#cart-icon.pulse {
+    animation: pulse 0.3s ease-in-out;
+}
+
+#cart-count {
+    position: absolute;
+    top: -10px;
+    right: -20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+@keyframes moveLeftRight {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
+}
+
+#cart-container:hover #cart-icon {
+    animation: moveLeftRight 0.5s ease-in-out infinite;
+}
+
+#cart-items {
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item button {
+    margin-left: 10px;
+}
+
+#cart-total {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.auth-buttons {
+    display: flex;
+}
+
+.auth-btn {
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn {
+    background-color: #4a4a4a;
+    color: white;
+    border: none;
+}
+
+.login-btn:hover {
+    background-color: #333333;
+}
+
+.register-btn {
+    background-color: white;
+    color: #333333;
+    border: 2px solid #4a4a4a;
+}
+
+.register-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.user-info {
+    position: relative;
+    padding: 10px;
+}
+
+.welcome {
+    color: white;
+    font-weight: bold;
+}
+
+.logout {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.logout:hover {
+    text-decoration: underline;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.shipping-info, .payment-options, .order-summary {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
+
+.payment-options label {
+    display: block;
+    margin: 10px 0;
+}
+
+h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.payment-button {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.red { background-color: #ff4d4d; }
+.blue { background-color: #4da6ff; }
+.yellow { background-color: #ffd11a; }
+
+.order-summary .info-product, .order-summary .total {
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-summary .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn-edit-cart, .btn-place-order {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-edit-cart {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-place-order {
+    background-color: #ff6600;
+    color: white;
+}
+
